@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Anup (Wipro) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" elementFormDefault="qualified" attributeFormDefault="unqualified" jaxb:version="1.0" jaxb:extensionBindingPrefixes="xjc">
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:globalBindings>
+				<xjc:serializable/>
+			</jaxb:globalBindings>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:complexType name="FlightData">
+		<xs:sequence>
+			<xs:element name="AP_CDE" default="NA" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FLT_GND_DTM" type="xs:string"/>
+			<xs:element name="WF_STATS_CDE" type="xs:string"/>
+			<xs:element name="FLT_EST_DTM" type="xs:string"/>
+			<xs:element name="OP_FLT_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="IS_NEW_REQUEST" type="xs:string"/>
+			<xs:element name="ARR_DPTR_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LEG_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="GATE_CDE" type="xs:string"/>
+			<xs:element name="AC_NOSE_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ORIG_DEST_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="PRE_CLOSE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="IS_CLOSE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="IS_WIDE_BODY" type="xs:string" nillable="true"/>
+			<xs:element name="INTL_CTY_IND" type="xs:string" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MailData">
+		<xs:sequence>
+			<xs:element name="MAIL_UNIT_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="MAIL_BRCD_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="POS_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="LD_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="CMDTY_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="TOT_WT_LB" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="ITM_CNT" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCANNED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AirlineCodeData">
+		<xs:sequence>
+			<xs:element name="AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AL_NME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AL_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LineItemData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LIN_ITEM_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="MSG_LIN_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CMDTY_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="THRU_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FNL_DEST_AP_CD" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="WF_CGO_WT_LBS" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="WF_CGO_PCS_CNT" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="SCNR_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="USR_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="RMK_TXT" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCANNED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FreightData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ARR_DPTR_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AWB_NUM" default="NA" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="preserve"/>
+						<xs:maxLength value="18"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WF_SCRN_LIN_ITM_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="CMDTY_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ITM_CNT" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="ITM_WT_LB" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="AVG_ITM_WT_LB" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="THRU_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="PREV_POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LOAD_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="LOAD_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCN_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCN_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="XPDT_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="DNGR_FRGT_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FRGT_STG_LOC_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="PREV_FRGT_STG_LOC_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCANNED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ARR_DPTR_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_STATS_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FLT_DPTR_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="TRNSF_OP_AL_CDE" type="xs:string" nillable="true"/>
+			<xs:element name="TRNSF_OP_FLT_NUM" type="xs:int" nillable="true"/>
+            <xs:element name="TRNSF_DPTR_DTM" type="xs:string" nillable="true"/>
+            <xs:element name="TRNSF_DEST_AP_CDE" type="xs:string" nillable="true" />                 
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCANNED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDPosInData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"/>
+			<xs:element name="AP_CDE" type="xs:string"/>
+			<xs:element name="WF_FNL_DEST" type="xs:string"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string"/>
+			<xs:element name="POS_NUM" type="xs:string"/>
+			<xs:element name="MSG_LIN_NUM" type="xs:string"/>
+			<xs:element name="CNTNR_WEIGHT" type="xs:double" default="0" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDPosOutData">
+		<xs:sequence>
+			<xs:element name="POS_STATS" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ErrorCodeData">
+		<xs:sequence>
+			<xs:element name="TYPE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CODE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="DESC" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SEVERITY_LEVEL" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ACTION" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDDefInData">
+		<xs:sequence>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_TYP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_FLT_DEST" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDDefOutData">
+		<xs:sequence>
+			<xs:element name="DEF_STATS" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCreateHubInData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_TYP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_CARR_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="HUB_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="REMARK" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCreateNormalInData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_TYP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="REMARK" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCreateOutData">
+		<xs:sequence>
+			<xs:element name="CNTNR_STATS_CDE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDRegInData">
+		<xs:sequence>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FNL_DEST_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDRegOutData">
+		<xs:sequence>
+			<xs:element name="REG_STATS" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BagsData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BAG_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BAG_PSGR_SEQ_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="BAG_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BAG_TAG_CRTN_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="DEST_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BSM_CRTN_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BAG_CRTN_TYP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BSM_DEL_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LD_AUTH_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCRTY_STATS_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CBN_CL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LD_STATS_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OFLD_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LD_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="RLBL_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="XPDT_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BAG_WT_LB" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="DMGD_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="TRKG_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SHRT_CONN_FLT_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="ALRT_TMS" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="MODIFIED_TIME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="SCANNED_TIME" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PassengerData">
+		<xs:sequence>
+			<xs:element name="BAG_PSGR_SEQ_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:double" default="0" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"/>
+			<xs:element name="LEG_SEQ_NUM" type="xs:int" default="0" nillable="true"/>
+			<xs:element name="OP_LEG_AL_CDE" type="xs:string"/>
+			<xs:element name="OP_LEG_FLT_NUM" type="xs:int"/>
+			<xs:element name="LEG_FLT_SCHED_DTM" type="xs:string"/>
+			<xs:element name="LEG_FLT_EST_DTM" type="xs:string"/>
+			<xs:element name="LEG_FLT_BLK_DTM" type="xs:string"/>
+			<xs:element name="LEG_GATE_CDE" type="xs:string"/>
+			<xs:element name="PNR_NUM" type="xs:string"/>
+			<xs:element name="LST_NME" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="CKIN_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="BRD_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="RERTE_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="STBY_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="LEG_AP_CDE" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AircraftData">
+		<xs:sequence>
+			<xs:element name="OP_FLT_NUM" type="xs:double" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" nillable="true"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" nillable="true"/>
+			<xs:element name="AC_NOSE_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="PLLT_LOC_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="IN_USE_IND" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="PLLT_SLT_CDE" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserInData">
+		<xs:sequence>
+			<xs:element name="USER_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PASSWORD" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="APPVERSION" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserOutData">
+		<xs:sequence>
+			<xs:element name="USER_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="SESSION_TIMEOUT" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="USERNAME" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="APPVERSION" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="STATIONTYPE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BagTagInData">
+		<xs:sequence>
+			<xs:element name="BAG_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CRTN_DTM" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Will contain multiple elements if duplicate bags are found-->
+	<xs:complexType name="BagTagOutData">
+		<xs:sequence>
+			<!--T_BAG_TAG-->
+			<xs:element name="BAG_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="BAG_DEST" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="GATE_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="LD_SEQ_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PAS_SEQ" type="xs:string"/>
+			<xs:element name="ON_AL_CD" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="ON_FLT" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="ON_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<!--T_FLT-->
+			<!--Unknown table-->
+			<xs:element name="ON_FLT_DTM" type="xs:string"/>
+			<xs:element name="IN_AL_CD" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="IN_FLT" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="IN_FLT_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="IN_AP_CDE" type="xs:string"/>
+			<!--PSGR_CK_BAG-->
+			<xs:element name="PAX_NAME" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PAX_STBY_STATUS" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PAX_BRD_STATUS" type="xs:string"/>
+			<xs:element name="PAX_CKIN_STATUS" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BagTagDupOutData">
+		<xs:sequence>
+			<!--T_BAG_TAG-->
+			<xs:element name="BAG_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="LCL_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="DEST_AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="LOADED" type="xs:string" default="NA" nillable="false"/>
+			<!--T_FLT-->
+			<!--Unknown table-->
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CRTN_DTM" type="xs:string" default="NA" nillable="false"/>
+			<!--PSGR_CK_BAG-->
+			<xs:element name="PNR" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PAX_NAME" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BinBulkInData">
+		<xs:sequence>
+            <xs:element name="OP_AL_CDE" type="xs:string"></xs:element>
+            <xs:element name="OP_FLT_NUM" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"
+				default="NA" nillable="false" />
+			<xs:element name="POS_NUM" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="AP_CDE" type="xs:string" default="NA"
+				nillable="false" />
+		</xs:sequence>
+	</xs:complexType>
+	<!--Will contain multiple elements if POS_NUM = ALL-->
+	<xs:complexType name="BinBulkOutData">
+		<xs:sequence>
+			<!--T_FLT-->
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"
+				default="NA" nillable="false" />
+			<xs:element name="FLT_EST_DTM" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="FLT_DEST" type="xs:string" default="NA"
+				nillable="false" />
+			<xs:element name="FLT_FNL_DEST" type="xs:string"
+				default="NA" nillable="false" />
+			<xs:element name="GATE_CDE" type="xs:string" default="NA"
+				nillable="false" />
+			<!--Will be sent from scanner-->
+			<xs:element name="NOSE_NUM" type="xs:string" />
+			<!--Calculate from T_BAG_TAG based upon the POS_NUM-->
+            <xs:element name="INTL_CTY_IND" type="xs:string"></xs:element>
+            <xs:element name="BINLIST" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BIN" type="xs:string"
+							default="NA" nillable="false" />
+						<xs:element name="BAGSCNT" type="xs:int"
+							default="0" nillable="false" />
+						<xs:element name="MAILCNT" type="xs:int"
+							default="0" nillable="false" />
+						<xs:element name="MAILWGT" type="xs:double"
+							default="0" nillable="false" />
+						<xs:element name="FRTCNT" type="xs:int"
+							default="0" nillable="false" />
+						<xs:element name="FRTWGT" type="xs:double"
+							default="0" nillable="false" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AwbInData">
+		<xs:sequence>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AWB_NUM" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReopenCloseUldInData">
+		<xs:sequence>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="ACTION_CDE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReopenCloseUldOutData">
+		<xs:sequence>
+			<xs:element name="REOPEN_CLOSE_STATS" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCartInData">
+		<xs:sequence>
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCreateOut">
+		<xs:sequence>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ULDCartOutData">
+		<xs:sequence>
+			<!--T_CNTNR-->
+			<xs:element name="CNTNR_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_SEQ_NUM" type="xs:string"/>
+			<xs:element name="CNTNR_SHEET" type="xs:string"/>
+			<xs:element name="CNTNR_STATS_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_DEST" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_FNL_DEST" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="CNTNR_TYP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="GATE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="H_OP_AL_CDE" type="xs:string"/>
+			<xs:element name="H_FLT_NUM" type="xs:string"/>
+			<xs:element name="H_FLT_DT" type="xs:string"/>
+			<xs:element name="H_DEST" type="xs:string"/>
+			<xs:element name="DTRM_TYPE" type="xs:string"/>
+			<xs:element name="POS_NUM" type="xs:string" default="NA" nillable="false"/>
+			<!--Calculate from T_BAG_TAG based upon the CNTNR_SEQ_NUM-->
+			<xs:element name="CART_IND" type="xs:string"/>
+			<xs:element name="DEPART_STATUS" type="xs:string"/>
+			<xs:element name="FLT_LD_IND" type="xs:string"/>
+			<xs:element name="INTL_CTY_IND" type="xs:string"/>
+			<xs:element name="CNTNR_WGT" type="xs:string"/>
+			<xs:element name="BAGS_COUNT" type="xs:int" default="0" nillable="false"/>
+			<xs:element name="MAIL_WEIGHT" type="xs:double" default="0" nillable="false"/>
+			<xs:element name="FREIGHT_WEIGHT" type="xs:double" default="0" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Will contain multiple elements with DEVICE_ID's working on the same OP_FLT_NUM-->
+	<xs:complexType name="PreCloseInData">
+		<xs:sequence>
+			<xs:element name="DEVICE_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="USER_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="AP_CDE" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="OP_AL_CDE" type="xs:string" default="NA" nillable="true"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string" default="NA" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PreCloseOutData">
+		<xs:sequence>
+			<xs:element name="DEVICE_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="USER_ID" type="xs:string" default="NA" nillable="false"/>
+			<xs:element name="PRE_CLOSED" type="xs:string" default="NA" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BagsToUnldInData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"/>
+			<xs:element name="AP_CDE" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BagsToUnldOutData">
+		<xs:sequence>
+			<xs:element name="BAG_ID" type="xs:string"/>
+			<xs:element name="CNTNR_ID" type="xs:string"/>
+			<xs:element name="POS" type="xs:string"/>
+			<xs:element name="LD_SEQ_NUM" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DestHeaderData">
+		<xs:sequence>
+			<xs:element name="DestHeader" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DestDetail" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="BAG_ID" type="xs:string"/>
+								<xs:attribute name="SOURCE" type="xs:string"/>
+								<xs:attribute name="STATUS" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="DEST" type="xs:string"/>
+					<xs:attribute name="TOT_CNT" type="xs:int"/>
+					<xs:attribute name="LCL_CNT" type="xs:int"/>
+					<xs:attribute name="INB_CNT" type="xs:int"/>
+					<xs:attribute name="UN_CNT" type="xs:int"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="StatusHeaderData">
+		<xs:sequence>
+			<xs:element name="StatusHeader" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="StatusDetail" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="BAG_ID" type="xs:string"/>
+								<xs:attribute name="SOURCE" type="xs:string"/>
+								<xs:attribute name="INB_FLT" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="STATUS" type="xs:string"/>
+					<xs:attribute name="TOT_CNT" type="xs:int"/>
+					<xs:attribute name="LCL_CNT" type="xs:int"/>
+					<xs:attribute name="INB_CNT" type="xs:int"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="XFERHeaderData">
+		<xs:sequence>
+			<xs:element name="XFERHeader" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="XFERDetail" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="BAG_ID" type="xs:string"/>
+								<xs:attribute name="STATUS" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="INB_FLT" type="xs:string"/>
+					<xs:attribute name="CNT" type="xs:int"/>
+					<xs:attribute name="EST" type="xs:string"/>
+					<xs:attribute name="GATE" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Footer">
+				<xs:complexType>
+					<xs:attribute name="XFER_CNT" type="xs:int"/>
+					<xs:attribute name="LCL_CNT" type="xs:int"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BagsToGoInData">
+		<xs:sequence>
+			<xs:element name="OP_AL_CDE" type="xs:string"/>
+			<xs:element name="AP_CDE" type="xs:string"/>
+			<xs:element name="OP_FLT_NUM" type="xs:string"/>
+			<xs:element name="FLT_SCHED_DTM" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="DownloadReqData">
+		<xs:sequence>
+			<xs:element name="Flight" nillable="true" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FLT_NUM" type="xs:string" nillable="true"/>
+						<xs:element name="FLT_SCHED_DTM" type="xs:string" nillable="true"/>
+						<xs:element name="IS_NEW_REQUEST" type="xs:string" nillable="false"/>
+						<xs:element name="LASTSYNCTIME" type="xs:string" nillable="true"/>
+						<xs:element name="DEPARTURESTATIONCODE" type="xs:string" nillable="false"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FlightCount" type="xs:int" nillable="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SafetracSOAPBody" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="ULDCheck" type="xs:string"/>
+					<xs:element name="BagsToUnld">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="BagsToUnldIn" type="BagsToUnldInData"/>
+								<xs:element name="BagsToUnldOut" type="BagsToUnldOutData" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Mail" type="MailData" maxOccurs="unbounded"/>
+					<xs:element name="DownloadReq" type="DownloadReqData"/>
+					<xs:element name="User">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="UserIn" type="UserInData" nillable="false"/>
+								<xs:element name="UserOut" type="UserOutData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ULDPos">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ULDPosOut" type="ULDPosOutData" nillable="false"/>
+								<xs:element name="ULDPosIn" type="ULDPosInData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Aircraft" type="AircraftData" maxOccurs="unbounded"/>
+					<xs:element name="Freight" type="FreightData" maxOccurs="unbounded"/>
+					<xs:element name="Flight" type="FlightData" maxOccurs="unbounded"/>
+					<xs:element name="Bags" type="BagsData" maxOccurs="unbounded"/>
+					<xs:element name="ULD" type="ULDData" maxOccurs="unbounded"/>
+					<xs:element name="ErrorCode" type="ErrorCodeData" maxOccurs="unbounded"/>
+					<xs:element name="LineItem" type="LineItemData" maxOccurs="unbounded"/>
+					<xs:element name="Passenger" type="PassengerData" maxOccurs="unbounded"/>
+					<xs:element name="AirlineCode" type="AirlineCodeData" maxOccurs="unbounded"/>
+					<xs:element name="BagTag">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="BagTagIn" type="BagTagInData" nillable="false"/>
+								<xs:element name="BagTagOut" type="BagTagOutData" nillable="false"/>
+								<xs:element name="BagTagDupOut" type="BagTagDupOutData" nillable="false" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Binbulk">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="BinbulkIn" type="BinBulkInData" nillable="false"/>
+								<xs:element name="BinBulkOut" type="BinBulkOutData" nillable="false" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ULDCart">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ULDCartIn" type="ULDCartInData" nillable="false"/>
+								<xs:element name="ULDCartOut" type="ULDCartOutData" nillable="false" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ULDCreate">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ULDCreateNormalIn" type="ULDCreateNormalInData" nillable="false"/>
+								<xs:element name="ULDCreateHubIn" type="ULDCreateHubInData" nillable="false"/>
+								<xs:element name="ULDCreateOut" type="ULDCreateOutData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PreClose">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="PreCloseIn" type="PreCloseInData"/>
+								<xs:element name="PreCloseOut" type="PreCloseOutData" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AwbInq" type="AwbInData"/>
+					<xs:element name="ULDReg">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ULDRegIn" type="ULDRegInData" nillable="false"/>
+								<xs:element name="ULDRegOut" type="ULDRegOutData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ULDDef">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ULDDefIn" type="ULDDefInData" nillable="false"/>
+								<xs:element name="ULDDefOut" type="ULDDefOutData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ReopenCloseULD" nillable="false">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ReopenCloseUldIn" type="ReopenCloseUldInData" nillable="false"/>
+								<xs:element name="ReopenCloseUldOut" type="ReopenCloseUldOutData" nillable="false"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="BagsToGo">
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="ByDest" type="DestHeaderData">
+								</xs:element>
+								<xs:element name="ByStatus" type="StatusHeaderData">
+								</xs:element>
+								<xs:element name="ByXFER" type="XFERHeaderData">
+								</xs:element>
+								<xs:element name="BagsToGoIn" type="BagsToGoInData">
+								</xs:element>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

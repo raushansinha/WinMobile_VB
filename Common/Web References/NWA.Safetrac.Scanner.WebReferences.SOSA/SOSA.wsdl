@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://webservice.logger.sosa.nwa.com" xmlns:impl="http://webservice.logger.sosa.nwa.com" targetNamespace="http://webservice.logger.sosa.nwa.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://webservice.logger.sosa.nwa.com" elementFormDefault="qualified" targetNamespace="http://webservice.logger.sosa.nwa.com">
+      <xsd:element name="insertMultipleLogDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertMultipleLogDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="insertMultipleLogDetailsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="retrieveApplicationLogs">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="date" nillable="true" type="xsd:dateTime" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="retrieveApplicationLogsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="retrieveApplicationLogsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertLogDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertLogDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="insertLogDetailsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="viewApplicationLogs">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="applCode" nillable="true" type="xsd:string" />
+            <xsd:element name="applModlCode" nillable="true" type="xsd:string" />
+            <xsd:element name="from" nillable="true" type="xsd:dateTime" />
+            <xsd:element name="to" nillable="true" type="xsd:dateTime" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="viewApplicationLogsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="viewApplicationLogsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="retrieveLogs">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="applicationCode" nillable="true" type="xsd:string" />
+            <xsd:element name="startDate" nillable="true" type="xsd:dateTime" />
+            <xsd:element name="startTime" nillable="true" type="xsd:string" />
+            <xsd:element name="endDate" nillable="true" type="xsd:dateTime" />
+            <xsd:element name="endTime" nillable="true" type="xsd:string" />
+            <xsd:element name="checkStatus" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="retrieveLogsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="retrieveLogsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateApplicationLogDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="date" nillable="true" type="xsd:dateTime" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateApplicationLogDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateApplicationLogDetailsReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="insertMultipleLogDetailsResponse">
+    <wsdl:part name="parameters" element="impl:insertMultipleLogDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertMultipleLogDetailsRequest">
+    <wsdl:part name="parameters" element="impl:insertMultipleLogDetails" />
+  </wsdl:message>
+  <wsdl:message name="updateApplicationLogDetailsRequest">
+    <wsdl:part name="parameters" element="impl:updateApplicationLogDetails" />
+  </wsdl:message>
+  <wsdl:message name="insertLogDetailsResponse">
+    <wsdl:part name="parameters" element="impl:insertLogDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveApplicationLogsResponse">
+    <wsdl:part name="parameters" element="impl:retrieveApplicationLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLogDetailsRequest">
+    <wsdl:part name="parameters" element="impl:insertLogDetails" />
+  </wsdl:message>
+  <wsdl:message name="updateApplicationLogDetailsResponse">
+    <wsdl:part name="parameters" element="impl:updateApplicationLogDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLogsRequest">
+    <wsdl:part name="parameters" element="impl:retrieveLogs" />
+  </wsdl:message>
+  <wsdl:message name="retrieveApplicationLogsRequest">
+    <wsdl:part name="parameters" element="impl:retrieveApplicationLogs" />
+  </wsdl:message>
+  <wsdl:message name="viewApplicationLogsRequest">
+    <wsdl:part name="parameters" element="impl:viewApplicationLogs" />
+  </wsdl:message>
+  <wsdl:message name="viewApplicationLogsResponse">
+    <wsdl:part name="parameters" element="impl:viewApplicationLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLogsResponse">
+    <wsdl:part name="parameters" element="impl:retrieveLogsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Logger">
+    <wsdl:operation name="insertMultipleLogDetails">
+      <wsdl:input name="insertMultipleLogDetailsRequest" message="impl:insertMultipleLogDetailsRequest" />
+      <wsdl:output name="insertMultipleLogDetailsResponse" message="impl:insertMultipleLogDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicationLogs">
+      <wsdl:input name="retrieveApplicationLogsRequest" message="impl:retrieveApplicationLogsRequest" />
+      <wsdl:output name="retrieveApplicationLogsResponse" message="impl:retrieveApplicationLogsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLogDetails">
+      <wsdl:input name="insertLogDetailsRequest" message="impl:insertLogDetailsRequest" />
+      <wsdl:output name="insertLogDetailsResponse" message="impl:insertLogDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="viewApplicationLogs">
+      <wsdl:input name="viewApplicationLogsRequest" message="impl:viewApplicationLogsRequest" />
+      <wsdl:output name="viewApplicationLogsResponse" message="impl:viewApplicationLogsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLogs">
+      <wsdl:input name="retrieveLogsRequest" message="impl:retrieveLogsRequest" />
+      <wsdl:output name="retrieveLogsResponse" message="impl:retrieveLogsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateApplicationLogDetails">
+      <wsdl:input name="updateApplicationLogDetailsRequest" message="impl:updateApplicationLogDetailsRequest" />
+      <wsdl:output name="updateApplicationLogDetailsResponse" message="impl:updateApplicationLogDetailsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoggerSoapBinding" type="impl:Logger">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertMultipleLogDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="insertMultipleLogDetailsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insertMultipleLogDetailsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicationLogs">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="retrieveApplicationLogsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="retrieveApplicationLogsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLogDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="insertLogDetailsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insertLogDetailsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewApplicationLogs">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="viewApplicationLogsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="viewApplicationLogsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLogs">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="retrieveLogsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="retrieveLogsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateApplicationLogDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateApplicationLogDetailsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateApplicationLogDetailsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoggerService">
+    <wsdl:port name="Logger" binding="impl:LoggerSoapBinding">
+      <wsdlsoap:address location="http://aotd2.mn.nwa.com:17061/SOSA-LOGGER-WEBSERVICE/services/Logger" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

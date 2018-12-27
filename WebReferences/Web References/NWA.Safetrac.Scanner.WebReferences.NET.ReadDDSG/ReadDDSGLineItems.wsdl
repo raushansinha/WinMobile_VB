@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReadDDSGLineItemsSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadDDSGLineItemsSoapOut">
+    <wsdl:part name="ReadDDSGLineItemsResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadDDSGLineItemsHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadDDSGLineItemsHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadDDSGLineItemsHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReadDDSGLineItemsHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:portType name="WS_ReadDDSGLineItemsSoap">
+    <wsdl:operation name="ReadDDSGLineItems">
+      <wsdl:input message="tns:ReadDDSGLineItemsSoapIn" />
+      <wsdl:output message="tns:ReadDDSGLineItemsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_ReadDDSGLineItemsHttpGet">
+    <wsdl:operation name="ReadDDSGLineItems">
+      <wsdl:input message="tns:ReadDDSGLineItemsHttpGetIn" />
+      <wsdl:output message="tns:ReadDDSGLineItemsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_ReadDDSGLineItemsHttpPost">
+    <wsdl:operation name="ReadDDSGLineItems">
+      <wsdl:input message="tns:ReadDDSGLineItemsHttpPostIn" />
+      <wsdl:output message="tns:ReadDDSGLineItemsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_ReadDDSGLineItemsSoap" type="tns:WS_ReadDDSGLineItemsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="ReadDDSGLineItems">
+      <soap:operation soapAction="http://safetrac.nwa.com/ReadDDSGLineItems" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_ReadDDSGLineItemsHttpGet" type="tns:WS_ReadDDSGLineItemsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ReadDDSGLineItems">
+      <http:operation location="/ReadDDSGLineItems" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_ReadDDSGLineItemsHttpPost" type="tns:WS_ReadDDSGLineItemsHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ReadDDSGLineItems">
+      <http:operation location="/ReadDDSGLineItems" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_ReadDDSGLineItems">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_ReadDDSGLineItemsSoap" binding="tns:WS_ReadDDSGLineItemsSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_ReadDDSGLineItems_AOT/ReadDDSGLineItems.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_ReadDDSGLineItemsHttpGet" binding="tns:WS_ReadDDSGLineItemsHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_ReadDDSGLineItems_AOT/ReadDDSGLineItems.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_ReadDDSGLineItemsHttpPost" binding="tns:WS_ReadDDSGLineItemsHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_ReadDDSGLineItems_AOT/ReadDDSGLineItems.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57AA68ED-8A8F-4582-8756-5142569420FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>NWA.Safetrac.Scanner.UI.ApplicationMain</StartupObject>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>NWA.Safetrac.Scanner.UI</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>3C41C503-53EF-4c2a-8DD4-A8217CAD115E</PlatformID>
+    <OSVersion>4.20</OSVersion>
+    <MyType>WindowsForms</MyType>
+    <DeployDirSuffix>UI</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\Aditya\VSS\Projects\Safetrac\Codebase\dot net\Backup\UI\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>NWA.Safetrac.Scanner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>NWA.Safetrac.Scanner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="opennetcf, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\anup\Desktop\opennetcf.dll</HintPath>
+    </Reference>
+    <Reference Include="opennetcf.windows.forms, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\anup\Desktop\opennetcf.windows.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationMain.vb" />
+    <Compile Include="Dialogs\dlgNoNetworkPrompt.Designer.vb">
+      <DependentUpon>dlgNoNetworkPrompt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgNoNetworkPrompt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgVersionUpgrade.Designer.vb">
+      <DependentUpon>dlgVersionUpgrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgVersionUpgrade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgHelpdesk.Designer.vb">
+      <DependentUpon>dlgHelpdesk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgHelpdesk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmLoadMail.Designer.vb">
+      <DependentUpon>dlgConfirmLoadMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmLoadMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgNetworkError.Designer.vb">
+      <DependentUpon>dlgNetworkError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgNetworkError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBagOnAlert.Designer.vb">
+      <DependentUpon>dlgBagOnAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBagOnAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmExpedite.designer.vb">
+      <DependentUpon>dlgConfirmExpedite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmExpedite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgMenuViews.Designer.vb">
+      <DependentUpon>dlgMenuViews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgMenuViews.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgError.Designer.vb">
+      <DependentUpon>dlgError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgUnloadBagWarning.designer.vb">
+      <DependentUpon>dlgUnloadBagWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgUnloadBagWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgVersion.Designer.vb">
+      <DependentUpon>dlgVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgVersion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgWait.Designer.vb">
+      <DependentUpon>dlgWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCloseOverride.designer.vb">
+      <DependentUpon>frmCloseOverride.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCloseOverride.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateMultipleContainers.Designer.vb">
+      <DependentUpon>frmCreateMultipleContainers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateMultipleContainers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFlightMenu.designer.vb">
+      <DependentUpon>frmFlightMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFlightMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBase.Designer.vb">
+      <DependentUpon>frmBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFlightReadyToClose.designer.vb">
+      <DependentUpon>frmFlightReadyToClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFlightReadyToClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForFreight.designer.vb">
+      <DependentUpon>frmBinBulkInquiryForFreight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForFreight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainMenu.Designer.vb">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSetBackLightTime.designer.vb">
+      <DependentUpon>dlgSetBackLightTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSetBackLightTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModifyFlight.designer.vb">
+      <DependentUpon>frmModifyFlight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModifyFlight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPreClose.Designer.vb">
+      <DependentUpon>frmPreClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPreClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPreCloseOverride.Designer.vb">
+      <DependentUpon>frmPreCloseOverride.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPreCloseOverride.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRemoveFlight.designer.vb">
+      <DependentUpon>frmRemoveFlight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRemoveFlight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgLoadUnloadFreight.Designer.vb">
+      <DependentUpon>dlgLoadUnloadFreight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgLoadUnloadFreight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgUnloadMailFrom.designer.vb">
+      <DependentUpon>dlgUnloadMailFrom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgUnloadMailFrom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddFlight.designer.vb">
+      <DependentUpon>frmAddFlight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddFlight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCloseReopenFlight.designer.vb">
+      <DependentUpon>dlgCloseReopenFlight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCloseReopenFlight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmCreateNewAWB.designer.vb">
+      <DependentUpon>dlgConfirmCreateNewAWB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmCreateNewAWB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgInitiatingCargo.designer.vb">
+      <DependentUpon>dlgInitiatingCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgInitiatingCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgRetrievingData.designer.vb">
+      <DependentUpon>dlgRetrievingData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgRetrievingData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgWeight.Designer.vb">
+      <DependentUpon>dlgWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlertCondition.designer.vb">
+      <DependentUpon>frmAlertCondition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlertCondition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBagAlertMenu.designer.vb">
+      <DependentUpon>frmBagAlertMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBagAlertMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBagtagInquiry.Designer.vb">
+      <DependentUpon>frmBagtagInquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBagtagInquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiry.designer.vb">
+      <DependentUpon>frmBinBulkInquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForSummary.designer.vb">
+      <DependentUpon>frmBinBulkInquiryForSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForLoadMail.designer.vb">
+      <DependentUpon>frmBinBulkInquiryForLoadMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkInquiryForLoadMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkSummary.designer.vb">
+      <DependentUpon>frmBinBulkSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBinBulkSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangeContainerDefinition.Designer.vb">
+      <DependentUpon>frmChangeContainerDefinition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangeContainerDefinition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateContainerSheetNum.Designer.vb">
+      <DependentUpon>frmCreateContainerSheetNum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateContainerSheetNum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreateNewAWB.designer.vb">
+      <DependentUpon>dlgCreateNewAWB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreateNewAWB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDuplicateBagsList.designer.vb">
+      <DependentUpon>frmDuplicateBagsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDuplicateBagsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpediteReason.designer.vb">
+      <DependentUpon>frmExpediteReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpediteReason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFlightInfo.designer.vb">
+      <DependentUpon>frmFlightInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFlightInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFlightInquiry.designer.vb">
+      <DependentUpon>frmFlightInquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFlightInquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFlightInquiryForClose.designer.vb">
+      <DependentUpon>frmFlightInquiryForClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFlightInquiryForClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLateBagInfPageOne.designer.vb">
+      <DependentUpon>frmLateBagInfPageOne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLateBagInfPageOne.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLateBagInfPageTwo.designer.vb">
+      <DependentUpon>frmLateBagInfPageTwo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLateBagInfPageTwo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsToUnload.Designer.vb">
+      <DependentUpon>frmViewBagsToUnload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsToUnload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadBagToBinBulk.designer.vb">
+      <DependentUpon>frmLoadBagToBinBulk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadBagToBinBulk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadBagToContainer.designer.vb">
+      <DependentUpon>frmLoadBagToContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadBagToContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadDetail.designer.vb">
+      <DependentUpon>frmLoadDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadFreightToBinBulk.designer.vb">
+      <DependentUpon>frmLoadFreightToBinBulk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadFreightToBinBulk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadMail.designer.vb">
+      <DependentUpon>frmLoadMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoadSummary.designer.vb">
+      <DependentUpon>frmLoadSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoadSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMailType.designer.vb">
+      <DependentUpon>frmMailType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMailType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMergeContainers.designer.vb">
+      <DependentUpon>frmMergeContainers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMergeContainers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmMergeContainers.designer.vb">
+      <DependentUpon>dlgConfirmMergeContainers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmMergeContainers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmMerge.designer.vb">
+      <DependentUpon>dlgConfirmMerge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmMerge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmOverrule.Designer.vb">
+      <DependentUpon>dlgConfirmOverrule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgConfirmOverrule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPositionLineItems.designer.vb">
+      <DependentUpon>frmPositionLineItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPositionLineItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPositionContainer.Designer.vb">
+      <DependentUpon>frmPositionContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPositionContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegisterContainer.Designer.vb">
+      <DependentUpon>frmRegisterContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegisterContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectReason.designer.vb">
+      <DependentUpon>frmSelectReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectReason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContainerInquiry.Designer.vb">
+      <DependentUpon>frmContainerInquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContainerInquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnloadBag.Designer.vb">
+      <DependentUpon>frmUnloadBag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnloadBag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnloadFreight.Designer.vb">
+      <DependentUpon>frmUnloadFreight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnloadFreight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsOnAlert.designer.vb">
+      <DependentUpon>frmViewBagsOnAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsOnAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReopenCondition.designer.vb">
+      <DependentUpon>frmReopenCondition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReopenCondition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCloseReopenFlight.designer.vb">
+      <DependentUpon>frmCloseReopenFlight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCloseReopenFlight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReopenResult.designer.vb">
+      <DependentUpon>frmReopenResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReopenResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSafetracBase.Designer.vb">
+      <DependentUpon>frmSafetracBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSafetracBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetBagtagAlert.designer.vb">
+      <DependentUpon>frmSetBagtagAlert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetBagtagAlert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgScanMode.designer.vb">
+      <DependentUpon>dlgScanMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgScanMode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContainerInquiryTwo.designer.vb">
+      <DependentUpon>frmContainerInquiryTwo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContainerInquiryTwo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContainerSummary.designer.vb">
+      <DependentUpon>frmContainerSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContainerSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerifyClock.designer.vb">
+      <DependentUpon>frmVerifyClock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerifyClock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVerifyClockMessage.designer.vb">
+      <DependentUpon>frmVerifyClockMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVerifyClockMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsToGo.Designer.vb">
+      <DependentUpon>frmViewBagsToGo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewBagsToGo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewHHTConfiguration.Designer.vb">
+      <DependentUpon>frmViewHHTConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewHHTConfiguration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewHTTInformation.designer.vb">
+      <DependentUpon>frmViewHTTInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewHTTInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewLineItems.designer.vb">
+      <DependentUpon>frmViewLineItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewLineItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\DisplayMessages.Designer.vb">
+      <DependentUpon>DisplayMessages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Footers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Footers.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Headers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Headers.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Images.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIController.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\dlgNoNetworkPrompt.resx">
+      <DependentUpon>dlgNoNetworkPrompt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgVersionUpgrade.resx">
+      <DependentUpon>dlgVersionUpgrade.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgHelpdesk.resx">
+      <DependentUpon>dlgHelpdesk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmLoadMail.resx">
+      <DependentUpon>dlgConfirmLoadMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgNetworkError.resx">
+      <DependentUpon>dlgNetworkError.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBagOnAlert.resx">
+      <DependentUpon>dlgBagOnAlert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmExpedite.resx">
+      <DependentUpon>dlgConfirmExpedite.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgMenuViews.resx">
+      <DependentUpon>dlgMenuViews.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgError.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgUnloadBagWarning.resx">
+      <DependentUpon>dlgUnloadBagWarning.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgVersion.resx">
+      <DependentUpon>dlgVersion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgWait.resx">
+      <DependentUpon>dlgWait.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCloseOverride.resx">
+      <DependentUpon>frmCloseOverride.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateMultipleContainers.resx">
+      <DependentUpon>frmCreateMultipleContainers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFlightMenu.resx">
+      <DependentUpon>frmFlightMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBase.resx">
+      <DependentUpon>frmBase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFlightReadyToClose.resx">
+      <DependentUpon>frmFlightReadyToClose.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBinBulkInquiryForFreight.resx">
+      <DependentUpon>frmBinBulkInquiryForFreight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSetBackLightTime.resx">
+      <DependentUpon>dlgSetBackLightTime.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModifyFlight.resx">
+      <DependentUpon>frmModifyFlight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPreClose.resx">
+      <DependentUpon>frmPreClose.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPreCloseOverride.resx">
+      <DependentUpon>frmPreCloseOverride.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRemoveFlight.resx">
+      <DependentUpon>frmRemoveFlight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgLoadUnloadFreight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgLoadUnloadFreight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgUnloadMailFrom.resx">
+      <DependentUpon>dlgUnloadMailFrom.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddFlight.resx">
+      <DependentUpon>frmAddFlight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCloseReopenFlight.resx">
+      <DependentUpon>dlgCloseReopenFlight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmCreateNewAWB.resx">
+      <DependentUpon>dlgConfirmCreateNewAWB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgInitiatingCargo.resx">
+      <DependentUpon>dlgInitiatingCargo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgRetrievingData.resx">
+      <DependentUpon>dlgRetrievingData.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgWeight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlertCondition.resx">
+      <DependentUpon>frmAlertCondition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBagAlertMenu.resx">
+      <DependentUpon>frmBagAlertMenu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBagtagInquiry.resx">
+      <DependentUpon>frmBagtagInquiry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBinBulkInquiry.resx">
+      <DependentUpon>frmBinBulkInquiry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBinBulkInquiryForSummary.resx">
+      <DependentUpon>frmBinBulkInquiryForSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBinBulkInquiryForLoadMail.resx">
+      <DependentUpon>frmBinBulkInquiryForLoadMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBinBulkSummary.resx">
+      <DependentUpon>frmBinBulkSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangeContainerDefinition.resx">
+      <DependentUpon>frmChangeContainerDefinition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateContainerSheetNum.resx">
+      <DependentUpon>frmCreateContainerSheetNum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCreateNewAWB.resx">
+      <DependentUpon>dlgCreateNewAWB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDuplicateBagsList.resx">
+      <DependentUpon>frmDuplicateBagsList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpediteReason.resx">
+      <DependentUpon>frmExpediteReason.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFlightInfo.resx">
+      <DependentUpon>frmFlightInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFlightInquiry.resx">
+      <DependentUpon>frmFlightInquiry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFlightInquiryForClose.resx">
+      <DependentUpon>frmFlightInquiryForClose.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLateBagInfPageOne.resx">
+      <DependentUpon>frmLateBagInfPageOne.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLateBagInfPageTwo.resx">
+      <DependentUpon>frmLateBagInfPageTwo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewBagsToUnload.resx">
+      <DependentUpon>frmViewBagsToUnload.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadBagToBinBulk.resx">
+      <DependentUpon>frmLoadBagToBinBulk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadBagToContainer.resx">
+      <DependentUpon>frmLoadBagToContainer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadDetail.resx">
+      <DependentUpon>frmLoadDetail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadFreightToBinBulk.resx">
+      <DependentUpon>frmLoadFreightToBinBulk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadMail.resx">
+      <DependentUpon>frmLoadMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoadSummary.resx">
+      <DependentUpon>frmLoadSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMailType.resx">
+      <DependentUpon>frmMailType.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMergeContainers.resx">
+      <DependentUpon>frmMergeContainers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmMergeContainers.resx">
+      <DependentUpon>dlgConfirmMergeContainers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmMerge.resx">
+      <DependentUpon>dlgConfirmMerge.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgConfirmOverrule.resx">
+      <DependentUpon>dlgConfirmOverrule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPositionLineItems.resx">
+      <DependentUpon>frmPositionLineItems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPositionContainer.resx">
+      <DependentUpon>frmPositionContainer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegisterContainer.resx">
+      <DependentUpon>frmRegisterContainer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectReason.resx">
+      <DependentUpon>frmSelectReason.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContainerInquiry.resx">
+      <DependentUpon>frmContainerInquiry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUnloadBag.resx">
+      <DependentUpon>frmUnloadBag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUnloadFreight.resx">
+      <DependentUpon>frmUnloadFreight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewBagsOnAlert.resx">
+      <DependentUpon>frmViewBagsOnAlert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReopenCondition.resx">
+      <DependentUpon>frmReopenCondition.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCloseReopenFlight.resx">
+      <DependentUpon>frmCloseReopenFlight.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReopenResult.resx">
+      <DependentUpon>frmReopenResult.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSafetracBase.resx">
+      <DependentUpon>frmSafetracBase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetBagtagAlert.resx">
+      <DependentUpon>frmSetBagtagAlert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgScanMode.resx">
+      <DependentUpon>dlgScanMode.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContainerInquiryTwo.resx">
+      <DependentUpon>frmContainerInquiryTwo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContainerSummary.resx">
+      <DependentUpon>frmContainerSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerifyClock.resx">
+      <DependentUpon>frmVerifyClock.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVerifyClockMessage.resx">
+      <DependentUpon>frmVerifyClockMessage.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewBagsToGo.resx">
+      <DependentUpon>frmViewBagsToGo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewHHTConfiguration.resx">
+      <DependentUpon>frmViewHHTConfiguration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewHTTInformation.resx">
+      <DependentUpon>frmViewHTTInformation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewLineItems.resx">
+      <DependentUpon>frmViewLineItems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DisplayMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DisplayMessages.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>NWA.Safetrac.Scanner.UI</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Footers.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>NWA.Safetrac.Scanner.UI</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Footers.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Headers.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>NWA.Safetrac.Scanner.UI</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Headers.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>NWA.Safetrac.Scanner.UI</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.vbproj">
+      <Project>{80E36D80-4B45-4315-BF85-4B4338002D86}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{9E4B8933-12E5-4439-8D3D-AF1CE11EA916}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.vbproj">
+      <Project>{352BAB58-AAEE-416E-8CA7-08D60DB6C09C}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hardware\Hardware.vbproj">
+      <Project>{F3C0C700-FC9A-4B03-A1F4-74FD323F1BB5}</Project>
+      <Name>Hardware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SyncManager\SyncManager.vbproj">
+      <Project>{FA30034F-0E4B-45FE-9202-C790B1F24DC3}</Project>
+      <Name>SyncManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebReferences\WebReferences.vbproj">
+      <Project>{C16541A0-4684-4B15-9C6A-494790CA102E}</Project>
+      <Name>WebReferences</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\battery_small.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\MAINWELC.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\WELCOME.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\WIZARD.BMP" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

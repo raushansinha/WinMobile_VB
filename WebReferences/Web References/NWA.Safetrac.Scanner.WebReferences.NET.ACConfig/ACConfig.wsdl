@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetACBinsSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsSoapOut">
+    <wsdl:part name="GetACBinsResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigSoapOut">
+    <wsdl:part name="GetACConfigResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="AcNum" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumSoapOut">
+    <wsdl:part name="GetACBinsbyACNumResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="AcNum" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACConfigHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="AcNum" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetACBinsbyACNumHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:portType name="ACConfigSoap">
+    <wsdl:operation name="GetACBins">
+      <wsdl:input message="tns:GetACBinsSoapIn" />
+      <wsdl:output message="tns:GetACBinsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <wsdl:input message="tns:GetACConfigSoapIn" />
+      <wsdl:output message="tns:GetACConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <wsdl:input message="tns:GetACBinsbyACNumSoapIn" />
+      <wsdl:output message="tns:GetACBinsbyACNumSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ACConfigHttpGet">
+    <wsdl:operation name="GetACBins">
+      <wsdl:input message="tns:GetACBinsHttpGetIn" />
+      <wsdl:output message="tns:GetACBinsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <wsdl:input message="tns:GetACConfigHttpGetIn" />
+      <wsdl:output message="tns:GetACConfigHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <wsdl:input message="tns:GetACBinsbyACNumHttpGetIn" />
+      <wsdl:output message="tns:GetACBinsbyACNumHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ACConfigHttpPost">
+    <wsdl:operation name="GetACBins">
+      <wsdl:input message="tns:GetACBinsHttpPostIn" />
+      <wsdl:output message="tns:GetACBinsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <wsdl:input message="tns:GetACConfigHttpPostIn" />
+      <wsdl:output message="tns:GetACConfigHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <wsdl:input message="tns:GetACBinsbyACNumHttpPostIn" />
+      <wsdl:output message="tns:GetACBinsbyACNumHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ACConfigSoap" type="tns:ACConfigSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetACBins">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetACBins" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetACConfig" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetACBinsbyACNum" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ACConfigHttpGet" type="tns:ACConfigHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetACBins">
+      <http:operation location="/GetACBins" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <http:operation location="/GetACConfig" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <http:operation location="/GetACBinsbyACNum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ACConfigHttpPost" type="tns:ACConfigHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetACBins">
+      <http:operation location="/GetACBins" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACConfig">
+      <http:operation location="/GetACConfig" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACBinsbyACNum">
+      <http:operation location="/GetACBinsbyACNum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ACConfig">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ACConfigSoap" binding="tns:ACConfigSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_GetACConfig_AOT/ACConfig.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ACConfigHttpGet" binding="tns:ACConfigHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_GetACConfig_AOT/ACConfig.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ACConfigHttpPost" binding="tns:ACConfigHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_GetACConfig_AOT/ACConfig.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

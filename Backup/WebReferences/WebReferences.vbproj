@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C16541A0-4684-4B15-9C6A-494790CA102E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>NWA.Safetrac.Scanner.WebReferences</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>3C41C503-53EF-4c2a-8DD4-A8217CAD115E</PlatformID>
+    <OSVersion>4.20</OSVersion>
+    <MyType>Windows</MyType>
+    <DeployDirSuffix>WebReferences</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>NWA.Safetrac.Scanner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>NWA.Safetrac.Scanner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaObjects.vb" />
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.J2EE.DataSync\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ACConfig\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.DeviceAdmin\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FlightLD\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FreightLoad\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.GetDateTime\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ReadDDSG\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerServiceResponse.vb" />
+    <Compile Include="ScannerServices.vb" />
+    <Compile Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.WriteFDSG\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="SyncServices.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\Documents and Settings\adityaa.CDC5S3TA-173188\Desktop\DataSyncService.wsdl">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.J2EE.DataSync\</RelPath>
+      <UpdateFromURL>C:\Documents and Settings\adityaa.CDC5S3TA-173188\Desktop\DataSyncService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Device_Admin_AOT/WS_Device_Admin.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.DeviceAdmin\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Device_Admin_AOT/WS_Device_Admin.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_FlightLD_AOT/FlightClose.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.FlightLD\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_FlightLD_AOT/FlightClose.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Freight_Load_AOT/WS_Freight_Load.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.FreightLoad\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Freight_Load_AOT/WS_Freight_Load.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_GetACConfig_AOT/ACConfig.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.ACConfig\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_GetACConfig_AOT/ACConfig.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_GetDateTime_AOT/WS_GetDateTime.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.GetDateTime\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_GetDateTime_AOT/WS_GetDateTime.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_ReadDDSGLineItems_AOT/ReadDDSGLineItems.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.ReadDDSG\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_ReadDDSGLineItems_AOT/ReadDDSGLineItems.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_WriteFDSGLineItem_AOT/WS_WriteFDSGLineItem.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\NWA.Safetrac.Scanner.WebReferences.NET.WriteFDSG\</RelPath>
+      <UpdateFromURL>http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_WriteFDSGLineItem_AOT/WS_WriteFDSGLineItem.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.GetDateTime\WS_GetDateTime.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{9E4B8933-12E5-4439-8D3D-AF1CE11EA916}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.GetDateTime\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.GetDateTime\WS_GetDateTime.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.DeviceAdmin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.DeviceAdmin\WS_Device_Admin.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.DeviceAdmin\WS_Device_Admin.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ACConfig\ACConfig.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ACConfig\ACConfig.wsdl" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ACConfig\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FlightLD\FlightClose.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FlightLD\FlightClose.wsdl" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FlightLD\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FreightLoad\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FreightLoad\WS_Freight_Load.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.FreightLoad\WS_Freight_Load.wsdl" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ReadDDSG\ReadDDSGLineItems.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.J2EE.DataSync\DataSyncService.wsdl" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.J2EE.DataSync\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.J2EE.DataSync\SafetracSOAPEnvelope.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ReadDDSG\ReadDDSGLineItems.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.ReadDDSG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SafetracSOAPBody.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SafetracSOAPBody.xsx">
+      <DependentUpon>SafetracSOAPBody.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.WriteFDSG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.WriteFDSG\WS_WriteFDSGLineItem.disco" />
+    <None Include="Web References\NWA.Safetrac.Scanner.WebReferences.NET.WriteFDSG\WS_WriteFDSGLineItem.wsdl" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

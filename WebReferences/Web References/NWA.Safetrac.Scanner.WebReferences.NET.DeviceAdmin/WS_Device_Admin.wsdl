@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllPWSSettingsSoapIn">
+    <wsdl:part name="ComputerName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPWSSettingsSoapOut">
+    <wsdl:part name="GetAllPWSSettingsResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionSoapIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="Version" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionSoapOut">
+    <wsdl:part name="CheckSoftwareVersionResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsSoapIn">
+    <wsdl:part name="SerialNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsSoapOut">
+    <wsdl:part name="GetLANSettingsResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowSoapIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="RequestedVersion" type="s:string" />
+    <wsdl:part name="IPAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowSoapOut">
+    <wsdl:part name="UpgradeSoftwareNowResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListSoapIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="NewVersion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListSoapOut">
+    <wsdl:part name="GetSoftwareListResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPWSSettingsHttpGetIn">
+    <wsdl:part name="ComputerName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPWSSettingsHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionHttpGetIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="Version" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsHttpGetIn">
+    <wsdl:part name="SerialNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowHttpGetIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="RequestedVersion" type="s:string" />
+    <wsdl:part name="IPAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListHttpGetIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="NewVersion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPWSSettingsHttpPostIn">
+    <wsdl:part name="ComputerName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPWSSettingsHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionHttpPostIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="Version" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSoftwareVersionHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsHttpPostIn">
+    <wsdl:part name="SerialNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLANSettingsHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowHttpPostIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="RequestedVersion" type="s:string" />
+    <wsdl:part name="IPAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeSoftwareNowHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListHttpPostIn">
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="AppName" type="s:string" />
+    <wsdl:part name="NewVersion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSoftwareListHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:portType name="WS_Device_AdminSoap">
+    <wsdl:operation name="GetAllPWSSettings">
+      <wsdl:input message="tns:GetAllPWSSettingsSoapIn" />
+      <wsdl:output message="tns:GetAllPWSSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <wsdl:input message="tns:CheckSoftwareVersionSoapIn" />
+      <wsdl:output message="tns:CheckSoftwareVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <wsdl:input message="tns:GetLANSettingsSoapIn" />
+      <wsdl:output message="tns:GetLANSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <wsdl:input message="tns:UpgradeSoftwareNowSoapIn" />
+      <wsdl:output message="tns:UpgradeSoftwareNowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <wsdl:input message="tns:GetSoftwareListSoapIn" />
+      <wsdl:output message="tns:GetSoftwareListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_Device_AdminHttpGet">
+    <wsdl:operation name="GetAllPWSSettings">
+      <wsdl:input message="tns:GetAllPWSSettingsHttpGetIn" />
+      <wsdl:output message="tns:GetAllPWSSettingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <wsdl:input message="tns:CheckSoftwareVersionHttpGetIn" />
+      <wsdl:output message="tns:CheckSoftwareVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <wsdl:input message="tns:GetLANSettingsHttpGetIn" />
+      <wsdl:output message="tns:GetLANSettingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <wsdl:input message="tns:UpgradeSoftwareNowHttpGetIn" />
+      <wsdl:output message="tns:UpgradeSoftwareNowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <wsdl:input message="tns:GetSoftwareListHttpGetIn" />
+      <wsdl:output message="tns:GetSoftwareListHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_Device_AdminHttpPost">
+    <wsdl:operation name="GetAllPWSSettings">
+      <wsdl:input message="tns:GetAllPWSSettingsHttpPostIn" />
+      <wsdl:output message="tns:GetAllPWSSettingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <wsdl:input message="tns:CheckSoftwareVersionHttpPostIn" />
+      <wsdl:output message="tns:CheckSoftwareVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <wsdl:input message="tns:GetLANSettingsHttpPostIn" />
+      <wsdl:output message="tns:GetLANSettingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <wsdl:input message="tns:UpgradeSoftwareNowHttpPostIn" />
+      <wsdl:output message="tns:UpgradeSoftwareNowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <wsdl:input message="tns:GetSoftwareListHttpPostIn" />
+      <wsdl:output message="tns:GetSoftwareListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_Device_AdminSoap" type="tns:WS_Device_AdminSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetAllPWSSettings">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetAllPWSSettings" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <soap:operation soapAction="http://safetrac.nwa.com/CheckSoftwareVersion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetLANSettings" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <soap:operation soapAction="http://safetrac.nwa.com/UpgradeSoftwareNow" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetSoftwareList" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_Device_AdminHttpGet" type="tns:WS_Device_AdminHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAllPWSSettings">
+      <http:operation location="/GetAllPWSSettings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <http:operation location="/CheckSoftwareVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <http:operation location="/GetLANSettings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <http:operation location="/UpgradeSoftwareNow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <http:operation location="/GetSoftwareList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_Device_AdminHttpPost" type="tns:WS_Device_AdminHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAllPWSSettings">
+      <http:operation location="/GetAllPWSSettings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSoftwareVersion">
+      <http:operation location="/CheckSoftwareVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLANSettings">
+      <http:operation location="/GetLANSettings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeSoftwareNow">
+      <http:operation location="/UpgradeSoftwareNow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftwareList">
+      <http:operation location="/GetSoftwareList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_Device_Admin">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_Device_AdminSoap" binding="tns:WS_Device_AdminSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Device_Admin_AOT/WS_Device_Admin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_Device_AdminHttpGet" binding="tns:WS_Device_AdminHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Device_Admin_AOT/WS_Device_Admin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_Device_AdminHttpPost" binding="tns:WS_Device_AdminHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_Device_Admin_AOT/WS_Device_Admin.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

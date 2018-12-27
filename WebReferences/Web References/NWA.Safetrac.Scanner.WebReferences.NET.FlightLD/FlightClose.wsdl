@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="anyType" nillable="true" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VerifyClockSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ClockNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyClockSoapOut">
+    <wsdl:part name="VerifyClockResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRSoapOut">
+    <wsdl:part name="TDDLRResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseSoapOut">
+    <wsdl:part name="GetLDResponseResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Override" type="s:string" />
+    <wsdl:part name="LineNumberList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseSoapOut">
+    <wsdl:part name="FlightCloseResult" type="s:anyType" />
+  </wsdl:message>
+  <wsdl:message name="VerifyClockHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ClockNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyClockHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Override" type="s:string" />
+    <wsdl:part name="LineNumberList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseHttpGetOut">
+    <wsdl:part name="Body" element="s0:anyType" />
+  </wsdl:message>
+  <wsdl:message name="VerifyClockHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ClockNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyClockHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TDDLRHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLDResponseHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Override" type="s:string" />
+    <wsdl:part name="LineNumberList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FlightCloseHttpPostOut">
+    <wsdl:part name="Body" element="s0:anyType" />
+  </wsdl:message>
+  <wsdl:portType name="WS_FlightLDSoap">
+    <wsdl:operation name="VerifyClock">
+      <wsdl:input message="tns:VerifyClockSoapIn" />
+      <wsdl:output message="tns:VerifyClockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <wsdl:input message="tns:TDDLRSoapIn" />
+      <wsdl:output message="tns:TDDLRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <wsdl:input message="tns:GetLDResponseSoapIn" />
+      <wsdl:output message="tns:GetLDResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <wsdl:input message="tns:FlightCloseSoapIn" />
+      <wsdl:output message="tns:FlightCloseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_FlightLDHttpGet">
+    <wsdl:operation name="VerifyClock">
+      <wsdl:input message="tns:VerifyClockHttpGetIn" />
+      <wsdl:output message="tns:VerifyClockHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <wsdl:input message="tns:TDDLRHttpGetIn" />
+      <wsdl:output message="tns:TDDLRHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <wsdl:input message="tns:GetLDResponseHttpGetIn" />
+      <wsdl:output message="tns:GetLDResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <wsdl:input message="tns:FlightCloseHttpGetIn" />
+      <wsdl:output message="tns:FlightCloseHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_FlightLDHttpPost">
+    <wsdl:operation name="VerifyClock">
+      <wsdl:input message="tns:VerifyClockHttpPostIn" />
+      <wsdl:output message="tns:VerifyClockHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <wsdl:input message="tns:TDDLRHttpPostIn" />
+      <wsdl:output message="tns:TDDLRHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <wsdl:input message="tns:GetLDResponseHttpPostIn" />
+      <wsdl:output message="tns:GetLDResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <wsdl:input message="tns:FlightCloseHttpPostIn" />
+      <wsdl:output message="tns:FlightCloseHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_FlightLDSoap" type="tns:WS_FlightLDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="VerifyClock">
+      <soap:operation soapAction="http://safetrac.nwa.com/VerifyClock" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <soap:operation soapAction="http://safetrac.nwa.com/TDDLR" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetLDResponse" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <soap:operation soapAction="http://safetrac.nwa.com/FlightClose" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_FlightLDHttpGet" type="tns:WS_FlightLDHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="VerifyClock">
+      <http:operation location="/VerifyClock" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <http:operation location="/TDDLR" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <http:operation location="/GetLDResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <http:operation location="/FlightClose" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_FlightLDHttpPost" type="tns:WS_FlightLDHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="VerifyClock">
+      <http:operation location="/VerifyClock" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDDLR">
+      <http:operation location="/TDDLR" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLDResponse">
+      <http:operation location="/GetLDResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightClose">
+      <http:operation location="/FlightClose" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_FlightLD">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_FlightLDSoap" binding="tns:WS_FlightLDSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_FlightLD_AOT/FlightClose.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_FlightLDHttpGet" binding="tns:WS_FlightLDHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_FlightLD_AOT/FlightClose.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_FlightLDHttpPost" binding="tns:WS_FlightLDHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/Safetrac/WebServices/WS_FlightLD_AOT/FlightClose.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

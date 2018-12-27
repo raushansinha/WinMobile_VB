@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDateTimeSoapIn">
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeSoapOut">
+    <wsdl:part name="GetDateTimeResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeSoapOut">
+    <wsdl:part name="GetLocalDateTimeResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeHttpGetIn">
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeHttpPostIn">
+    <wsdl:part name="Station" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocalDateTimeHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:portType name="WS_GetDateTimeSoap">
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input message="tns:GetDateTimeSoapIn" />
+      <wsdl:output message="tns:GetDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <wsdl:input message="tns:GetLocalDateTimeSoapIn" />
+      <wsdl:output message="tns:GetLocalDateTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_GetDateTimeHttpGet">
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input message="tns:GetDateTimeHttpGetIn" />
+      <wsdl:output message="tns:GetDateTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <wsdl:input message="tns:GetLocalDateTimeHttpGetIn" />
+      <wsdl:output message="tns:GetLocalDateTimeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_GetDateTimeHttpPost">
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input message="tns:GetDateTimeHttpPostIn" />
+      <wsdl:output message="tns:GetDateTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <wsdl:input message="tns:GetLocalDateTimeHttpPostIn" />
+      <wsdl:output message="tns:GetLocalDateTimeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_GetDateTimeSoap" type="tns:WS_GetDateTimeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetDateTime">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetDateTime" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetLocalDateTime" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GetDateTimeHttpGet" type="tns:WS_GetDateTimeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDateTime">
+      <http:operation location="/GetDateTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <http:operation location="/GetLocalDateTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GetDateTimeHttpPost" type="tns:WS_GetDateTimeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDateTime">
+      <http:operation location="/GetDateTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalDateTime">
+      <http:operation location="/GetLocalDateTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_GetDateTime">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_GetDateTimeSoap" binding="tns:WS_GetDateTimeSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_GetDateTime_AOT/WS_GetDateTime.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GetDateTimeHttpGet" binding="tns:WS_GetDateTimeHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_GetDateTime_AOT/WS_GetDateTime.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GetDateTimeHttpPost" binding="tns:WS_GetDateTimeHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_GetDateTime_AOT/WS_GetDateTime.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

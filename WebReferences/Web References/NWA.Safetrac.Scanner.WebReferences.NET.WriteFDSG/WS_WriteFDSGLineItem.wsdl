@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://safetrac.nwa.com/literalTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://safetrac.nwa.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://safetrac.nwa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://safetrac.nwa.com/literalTypes">
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddLineFDSGSoapIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="Pieces" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Dest" type="s:string" />
+    <wsdl:part name="FinalDest" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLineFDSGSoapOut">
+    <wsdl:part name="AddLineFDSGResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineSoapIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineSoapOut">
+    <wsdl:part name="PositionLineResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="LDPosition" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="FinalDestination" type="s:string" />
+    <wsdl:part name="DupFlag" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="ThruIndicator" type="s:string" />
+    <wsdl:part name="ActionIndicator" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemSoapOut">
+    <wsdl:part name="WriteFDSGLineItemResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="BinNumber" type="s:string" />
+    <wsdl:part name="DisplayFlag" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="Final" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksSoapOut">
+    <wsdl:part name="AddRemarksResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksSoapIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksSoapOut">
+    <wsdl:part name="GetRemarksResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLineFDSGHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="Pieces" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Dest" type="s:string" />
+    <wsdl:part name="FinalDest" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLineFDSGHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="LDPosition" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="FinalDestination" type="s:string" />
+    <wsdl:part name="DupFlag" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="ThruIndicator" type="s:string" />
+    <wsdl:part name="ActionIndicator" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="BinNumber" type="s:string" />
+    <wsdl:part name="DisplayFlag" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="Final" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksHttpGetIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksHttpGetOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLineFDSGHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="Pieces" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Dest" type="s:string" />
+    <wsdl:part name="FinalDest" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLineFDSGHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineHttpPostIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PositionLineHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="LineNumber" type="s:string" />
+    <wsdl:part name="LDPosition" type="s:string" />
+    <wsdl:part name="Commodity" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="SpecialWeight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="FinalDestination" type="s:string" />
+    <wsdl:part name="DupFlag" type="s:string" />
+    <wsdl:part name="Container" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="ThruIndicator" type="s:string" />
+    <wsdl:part name="ActionIndicator" type="s:string" />
+    <wsdl:part name="Position" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WriteFDSGLineItemHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="BinNumber" type="s:string" />
+    <wsdl:part name="DisplayFlag" type="s:string" />
+    <wsdl:part name="PieceCount" type="s:string" />
+    <wsdl:part name="Weight" type="s:string" />
+    <wsdl:part name="Destination" type="s:string" />
+    <wsdl:part name="Final" type="s:string" />
+    <wsdl:part name="Remarks" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRemarksHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksHttpPostIn">
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Carrier" type="s:string" />
+    <wsdl:part name="Flight" type="s:string" />
+    <wsdl:part name="FlightDate" type="s:string" />
+    <wsdl:part name="Station" type="s:string" />
+    <wsdl:part name="ArrivalDeparture" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemarksHttpPostOut">
+    <wsdl:part name="Body" element="s0:string" />
+  </wsdl:message>
+  <wsdl:portType name="WS_WriteFDSGLineItemSoap">
+    <wsdl:operation name="AddLineFDSG">
+      <wsdl:input message="tns:AddLineFDSGSoapIn" />
+      <wsdl:output message="tns:AddLineFDSGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <wsdl:input message="tns:PositionLineSoapIn" />
+      <wsdl:output message="tns:PositionLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <wsdl:input message="tns:WriteFDSGLineItemSoapIn" />
+      <wsdl:output message="tns:WriteFDSGLineItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <wsdl:input message="tns:AddRemarksSoapIn" />
+      <wsdl:output message="tns:AddRemarksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <wsdl:input message="tns:GetRemarksSoapIn" />
+      <wsdl:output message="tns:GetRemarksSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_WriteFDSGLineItemHttpGet">
+    <wsdl:operation name="AddLineFDSG">
+      <wsdl:input message="tns:AddLineFDSGHttpGetIn" />
+      <wsdl:output message="tns:AddLineFDSGHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <wsdl:input message="tns:PositionLineHttpGetIn" />
+      <wsdl:output message="tns:PositionLineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <wsdl:input message="tns:WriteFDSGLineItemHttpGetIn" />
+      <wsdl:output message="tns:WriteFDSGLineItemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <wsdl:input message="tns:AddRemarksHttpGetIn" />
+      <wsdl:output message="tns:AddRemarksHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <wsdl:input message="tns:GetRemarksHttpGetIn" />
+      <wsdl:output message="tns:GetRemarksHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_WriteFDSGLineItemHttpPost">
+    <wsdl:operation name="AddLineFDSG">
+      <wsdl:input message="tns:AddLineFDSGHttpPostIn" />
+      <wsdl:output message="tns:AddLineFDSGHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <wsdl:input message="tns:PositionLineHttpPostIn" />
+      <wsdl:output message="tns:PositionLineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <wsdl:input message="tns:WriteFDSGLineItemHttpPostIn" />
+      <wsdl:output message="tns:WriteFDSGLineItemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <wsdl:input message="tns:AddRemarksHttpPostIn" />
+      <wsdl:output message="tns:AddRemarksHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <wsdl:input message="tns:GetRemarksHttpPostIn" />
+      <wsdl:output message="tns:GetRemarksHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_WriteFDSGLineItemSoap" type="tns:WS_WriteFDSGLineItemSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="AddLineFDSG">
+      <soap:operation soapAction="http://safetrac.nwa.com/AddLineFDSG" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <soap:operation soapAction="http://safetrac.nwa.com/PositionLine" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <soap:operation soapAction="http://safetrac.nwa.com/WriteFDSGLineItem" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <soap:operation soapAction="http://safetrac.nwa.com/AddRemarks" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <soap:operation soapAction="http://safetrac.nwa.com/GetRemarks" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://safetrac.nwa.com/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_WriteFDSGLineItemHttpGet" type="tns:WS_WriteFDSGLineItemHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="AddLineFDSG">
+      <http:operation location="/AddLineFDSG" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <http:operation location="/PositionLine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <http:operation location="/WriteFDSGLineItem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <http:operation location="/AddRemarks" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <http:operation location="/GetRemarks" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_WriteFDSGLineItemHttpPost" type="tns:WS_WriteFDSGLineItemHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="AddLineFDSG">
+      <http:operation location="/AddLineFDSG" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PositionLine">
+      <http:operation location="/PositionLine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFDSGLineItem">
+      <http:operation location="/WriteFDSGLineItem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemarks">
+      <http:operation location="/AddRemarks" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemarks">
+      <http:operation location="/GetRemarks" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_WriteFDSGLineItem">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_WriteFDSGLineItemSoap" binding="tns:WS_WriteFDSGLineItemSoap">
+      <soap:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_WriteFDSGLineItem_AOT/WS_WriteFDSGLineItem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_WriteFDSGLineItemHttpGet" binding="tns:WS_WriteFDSGLineItemHttpGet">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_WriteFDSGLineItem_AOT/WS_WriteFDSGLineItem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_WriteFDSGLineItemHttpPost" binding="tns:WS_WriteFDSGLineItemHttpPost">
+      <http:address location="http://bmlabj01.mn.nwa.com/safetrac/webservices/WS_WriteFDSGLineItem_AOT/WS_WriteFDSGLineItem.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

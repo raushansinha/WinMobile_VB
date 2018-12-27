@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AircraftAlias" xml:space="preserve">
+    <value>Aircraft</value>
+  </data>
+  <data name="AircraftCommodityName" xml:space="preserve">
+    <value>AIRCRAFT</value>
+  </data>
+  <data name="AircraftCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Aircraft_Config("AC_NOSE_NUM nvarchar(10), POS_NUM nvarchar(2),PLLT_LOC_NUM nvarchar(2), IN_USE_IND nvarchar(1) NOT NULL, PLLT_SLT_CDE nvarchar(2) NOT NULL, MODIFIED_TIME datetime NOT NULL, CONSTRAINT pkAirConfig PRIMARY KEY (AC_NOSE_NUM,POS_NUM,PLLT_LOC_NUM))</value>
+  </data>
+  <data name="AircraftDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Aircraft_Config] WHERE (([AC_NOSE_NUM] = @p1) AND ([POS_NUM] = @p2) AND ([PLLT_LOC_NUM] = @p3) AND ([IN_USE_IND] = @p4) AND ([PLLT_SLT_CDE] = @p5) AND ([MODIFIED_TIME] = @p6))</value>
+  </data>
+  <data name="AircraftDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="AircraftIndexCommand" xml:space="preserve">
+    <value>create index airconfigselectindex on T_Aircraft_Config (MODIFIED_TIME)</value>
+  </data>
+  <data name="AircraftInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Aircraft_Config] ([AC_NOSE_NUM], [POS_NUM], [PLLT_LOC_NUM], [IN_USE_IND], [PLLT_SLT_CDE], [MODIFIED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)</value>
+  </data>
+  <data name="AircraftScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="AircraftSelectCommand" xml:space="preserve">
+    <value>SELECT AC_NOSE_NUM, POS_NUM, PLLT_LOC_NUM, IN_USE_IND, PLLT_SLT_CDE, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME  FROM T_Aircraft_Config</value>
+  </data>
+  <data name="AircraftTableName" xml:space="preserve">
+    <value>T_Aircraft_Config</value>
+  </data>
+  <data name="AircraftUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Aircraft_Config] SET [AC_NOSE_NUM] = @p1, [POS_NUM] = @p2, [PLLT_LOC_NUM] = @p3, [IN_USE_IND] = @p4, [PLLT_SLT_CDE] = @p5, [MODIFIED_TIME] = @p6 WHERE (([AC_NOSE_NUM] = @p7) AND ([POS_NUM] = @p8) AND ([PLLT_LOC_NUM] = @p9) AND ([IN_USE_IND] = @p10) AND ([PLLT_SLT_CDE] = @p11) AND ([MODIFIED_TIME] = @p12))</value>
+  </data>
+  <data name="AircraftUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AircraftUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="AirlineCodeAlias" xml:space="preserve">
+    <value>AirlineCode</value>
+  </data>
+  <data name="AirlineCodeCommodityName" xml:space="preserve">
+    <value>AIRLINECODE</value>
+  </data>
+  <data name="AirlineCodeCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Airline_Code("AL_CDE nvarchar(3), AL_NME nvarchar(35) NOT NULL, AL_NUM nvarchar(3) NOT NULL, MODIFIED_TIME datetime NOT NULL, CONSTRAINT pkAirCode PRIMARY KEY(AL_CDE))</value>
+  </data>
+  <data name="AirlineCodeDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Airline_Code] WHERE (([AL_CDE] = @p1) AND ([AL_NME] = @p2) AND ([AL_NUM] = @p3) AND ([MODIFIED_TIME] = @p4))</value>
+  </data>
+  <data name="AirlineCodeDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="AirlineCodeIndexCommand" xml:space="preserve">
+    <value>create index aircodeselectindex on T_Airline_Code (MODIFIED_TIME)</value>
+  </data>
+  <data name="AirlineCodeInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Airline_Code] ([AL_CDE], [AL_NME], [AL_NUM], [MODIFIED_TIME]) VALUES (@p1, @p2, @p3, @p4)</value>
+  </data>
+  <data name="AirlineCodeScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="AirlineCodeSelectCommand" xml:space="preserve">
+    <value>SELECT AL_CDE, AL_NME, AL_NUM, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME FROM T_Airline_Code</value>
+  </data>
+  <data name="AirlineCodeTableName" xml:space="preserve">
+    <value>T_Airline_Code</value>
+  </data>
+  <data name="AirlineCodeUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Airline_Code] SET [AL_CDE] = @p1, [AL_NME] = @p2, [AL_NUM] = @p3, [MODIFIED_TIME] = @p4 WHERE (([AL_CDE] = @p5) AND ([AL_NME] = @p6) AND ([AL_NUM] = @p7) AND ([MODIFIED_TIME] = @p8))</value>
+  </data>
+  <data name="AirlineCodeUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AirlineCodeUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="BagsAlias" xml:space="preserve">
+    <value>Bags</value>
+  </data>
+  <data name="BagsCommodityName" xml:space="preserve">
+    <value>BAGS</value>
+  </data>
+  <data name="BagsCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Bag_Tag("OP_AL_CDE nvarchar(3), OP_FLT_NUM numeric(4,0), FLT_SCHED_DTM datetime, BAG_ID nvarchar(10), BAG_PSGR_SEQ_NUM numeric(7,0), AP_CDE nvarchar(5) NOT NULL, CNTNR_SEQ_NUM numeric(6) NULL, BAG_TYP_CDE nvarchar(4) NULL, CNTNR_ID nvarchar(10) NULL, BAG_TAG_CRTN_DTM datetime NOT NULL, DEST_AP_CDE nvarchar(5) NOT NULL, BSM_CRTN_DTM datetime NULL, BAG_CRTN_TYP_CDE nvarchar(1) NOT NULL, BSM_DEL_IND nvarchar(1) NOT NULL, LD_AUTH_IND nvarchar(1) NOT NULL, SCRTY_STATS_CDE nvarchar(1) NOT NULL, CBN_CL_CDE nvarchar(1) NULL, LD_STATS_CDE nvarchar(1) NOT NULL, OFLD_IND nvarchar(1) NOT NULL, LD_SEQ_NUM numeric(4) NULL, RLBL_IND nvarchar(1) NOT NULL, XPDT_IND nvarchar(1) NOT NULL, BAG_WT_LB numeric(6,1) NULL, POS_NUM nvarchar(2) NULL, DMGD_IND nvarchar(1) NULL, TRKG_IND nvarchar(1) NULL, SHRT_CONN_FLT_IND nvarchar(1) NOT NULL, UPDT_TMS datetime NULL, MODIFIED_TIME datetime NOT NULL, SCANNED_TIME datetime NOT NULL, CONSTRAINT pkBagTag PRIMARY KEY(OP_AL_CDE, OP_FLT_NUM, FLT_SCHED_DTM, BAG_ID,BAG_PSGR_SEQ_NUM))</value>
+  </data>
+  <data name="BagsDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Bag_Tag] WHERE (([OP_AL_CDE] = @p1) AND ([OP_FLT_NUM] = @p2) AND ([FLT_SCHED_DTM] = @p3) AND ([BAG_ID] = @p4) AND ([BAG_PSGR_SEQ_NUM] = @p5) AND ([AP_CDE] = @p6) AND ((@p7 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p8)) AND ((@p9 = 1 AND [BAG_TYP_CDE] IS NULL) OR ([BAG_TYP_CDE] = @p10)) AND ((@p11 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p12)) AND ([BAG_TAG_CRTN_DTM] = @p13) AND ([DEST_AP_CDE] = @p14) AND ((@p15 = 1 AND [BSM_CRTN_DTM] IS NULL) OR ([BSM_CRTN_DTM] = @p16)) AND ([BAG_CRTN_TYP_CDE] = @p17) AND ([BSM_DEL_IND] = @p18) AND ([LD_AUTH_IND] = @p19) AND ([SCRTY_STATS_CDE] = @p20) AND ((@p21 = 1 AND [CBN_CL_CDE] IS NULL) OR ([CBN_CL_CDE] = @p22)) AND ([LD_STATS_CDE] = @p23) AND ([OFLD_IND] = @p24) AND ((@p25 = 1 AND [LD_SEQ_NUM] IS NULL) OR ([LD_SEQ_NUM] = @p26)) AND ([RLBL_IND] = @p27) AND ([XPDT_IND] = @p28) AND ((@p29 = 1 AND [BAG_WT_LB] IS NULL) OR ([BAG_WT_LB] = @p30)) AND ((@p31 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p32)) AND ((@p33 = 1 AND [DMGD_IND] IS NULL) OR ([DMGD_IND] = @p34)) AND ((@p35 = 1 AND [TRKG_IND] IS NULL) OR ([TRKG_IND] = @p36)) AND ([SHRT_CONN_FLT_IND] = @p37) AND ((@p38 = 1 AND [UPDT_TMS] IS NULL) OR ([UPDT_TMS] = @p39)) AND ([MODIFIED_TIME] = @p40) AND ([SCANNED_TIME] = @p41))</value>
+  </data>
+  <data name="BagsDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="BagsIndexCommand" xml:space="preserve">
+    <value>create index bagtagselectindex on T_Bag_Tag (SCANNED_TIME, MODIFIED_TIME)</value>
+  </data>
+  <data name="BagsInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Bag_Tag] ([OP_AL_CDE], [OP_FLT_NUM], [FLT_SCHED_DTM], [BAG_ID], [BAG_PSGR_SEQ_NUM], [AP_CDE], [CNTNR_SEQ_NUM], [BAG_TYP_CDE], [CNTNR_ID], [BAG_TAG_CRTN_DTM], [DEST_AP_CDE], [BSM_CRTN_DTM], [BAG_CRTN_TYP_CDE], [BSM_DEL_IND], [LD_AUTH_IND], [SCRTY_STATS_CDE], [CBN_CL_CDE], [LD_STATS_CDE], [OFLD_IND], [LD_SEQ_NUM], [RLBL_IND], [XPDT_IND], [BAG_WT_LB], [POS_NUM], [DMGD_IND], [TRKG_IND], [SHRT_CONN_FLT_IND], [UPDT_TMS], [MODIFIED_TIME], [SCANNED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30)</value>
+  </data>
+  <data name="BagsScanApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="BagsSelectCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, OP_FLT_NUM, convert(nvarchar,FLT_SCHED_DTM,23) as FLT_SCHED_DTM, BAG_ID, BAG_PSGR_SEQ_NUM, AP_CDE, coalesce(CNTNR_SEQ_NUM, '" &amp; String.Empty &amp; "') as CNTNR_SEQ_NUM, coalesce(BAG_TYP_CDE, '" &amp; String.Empty &amp; "') as BAG_TYP_CDE, coalesce(CNTNR_ID, '" &amp; String.Empty &amp; "') as CNTNR_ID, convert(nvarchar, BAG_TAG_CRTN_DTM,20) as BAG_TAG_CRTN_DTM, DEST_AP_CDE, coalesce(convert(nvarchar, BSM_CRTN_DTM,20), '" &amp; String.Empty &amp; "') as BSM_CRTN_DTM, BAG_CRTN_TYP_CDE, BSM_DEL_IND, LD_AUTH_IND, SCRTY_STATS_CDE, coalesce(CBN_CL_CDE, '" &amp; String.Empty &amp; "') as CBN_CL_CDE, LD_STATS_CDE, OFLD_IND, coalesce(LD_SEQ_NUM, '" &amp; String.Empty &amp; "') as LD_SEQ_NUM, RLBL_IND, XPDT_IND, coalesce(BAG_WT_LB, '" &amp; String.Empty &amp; "') as BAG_WT_LB, coalesce(POS_NUM, '" &amp; String.Empty &amp; "') as POS_NUM, coalesce(DMGD_IND, '" &amp; String.Empty &amp; "') as DMGD_IND, coalesce(TRKG_IND, '" &amp; String.Empty &amp; "') as TRKG_IND, SHRT_CONN_FLT_IND, coalesce(convert(nvarchar, UPDT_TMS,20), '" &amp; String.Empty &amp; "') UPDT_TMS, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME, coalesce(convert(nvarchar, SCANNED_TIME,20), '" &amp; String.Empty &amp; "') as SCANNED_TIME FROM T_Bag_Tag</value>
+  </data>
+  <data name="BagsTableName" xml:space="preserve">
+    <value>T_Bag_Tag</value>
+  </data>
+  <data name="BagsUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Bag_Tag] SET [OP_AL_CDE] = @p1, [OP_FLT_NUM] = @p2, [FLT_SCHED_DTM] = @p3, [BAG_ID] = @p4, [BAG_PSGR_SEQ_NUM] = @p5, [AP_CDE] = @p6, [CNTNR_SEQ_NUM] = @p7, [BAG_TYP_CDE] = @p8, [CNTNR_ID] = @p9, [BAG_TAG_CRTN_DTM] = @p10, [DEST_AP_CDE] = @p11, [BSM_CRTN_DTM] = @p12, [BAG_CRTN_TYP_CDE] = @p13, [BSM_DEL_IND] = @p14, [LD_AUTH_IND] = @p15, [SCRTY_STATS_CDE] = @p16, [CBN_CL_CDE] = @p17, [LD_STATS_CDE] = @p18, [OFLD_IND] = @p19, [LD_SEQ_NUM] = @p20, [RLBL_IND] = @p21, [XPDT_IND] = @p22, [BAG_WT_LB] = @p23, [POS_NUM] = @p24, [DMGD_IND] = @p25, [TRKG_IND] = @p26, [SHRT_CONN_FLT_IND] = @p27, [UPDT_TMS] = @p28, [MODIFIED_TIME] = @p29, [SCANNED_TIME] = @p30 WHERE (([OP_AL_CDE] = @p31) AND ([OP_FLT_NUM] = @p32) AND ([FLT_SCHED_DTM] = @p33) AND ([BAG_ID] = @p34) AND ([BAG_PSGR_SEQ_NUM] = @p35) AND ([AP_CDE] = @p36) AND ((@p37 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p38)) AND ((@p39 = 1 AND [BAG_TYP_CDE] IS NULL) OR ([BAG_TYP_CDE] = @p40)) AND ((@p41 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p42)) AND ([BAG_TAG_CRTN_DTM] = @p43) AND ([DEST_AP_CDE] = @p44) AND ((@p45 = 1 AND [BSM_CRTN_DTM] IS NULL) OR ([BSM_CRTN_DTM] = @p46)) AND ([BAG_CRTN_TYP_CDE] = @p47) AND ([BSM_DEL_IND] = @p48) AND ([LD_AUTH_IND] = @p49) AND ([SCRTY_STATS_CDE] = @p50) AND ((@p51 = 1 AND [CBN_CL_CDE] IS NULL) OR ([CBN_CL_CDE] = @p52)) AND ([LD_STATS_CDE] = @p53) AND ([OFLD_IND] = @p54) AND ((@p55 = 1 AND [LD_SEQ_NUM] IS NULL) OR ([LD_SEQ_NUM] = @p56)) AND ([RLBL_IND] = @p57) AND ([XPDT_IND] = @p58) AND ((@p59 = 1 AND [BAG_WT_LB] IS NULL) OR ([BAG_WT_LB] = @p60)) AND ((@p61 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p62)) AND ((@p63 = 1 AND [DMGD_IND] IS NULL) OR ([DMGD_IND] = @p64)) AND ((@p65 = 1 AND [TRKG_IND] IS NULL) OR ([TRKG_IND] = @p66)) AND ([SHRT_CONN_FLT_IND] = @p67) AND ((@p68 = 1 AND [UPDT_TMS] IS NULL) OR ([UPDT_TMS] = @p69)) AND ([MODIFIED_TIME] = @p70) AND ([SCANNED_TIME] = @p71))</value>
+  </data>
+  <data name="BagsUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BagsUploadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="BagsInsertNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>select temp.* from tempT_Bag_Tag temp where not exists (select  1  FROM t_bag_tag where TEMP.OP_AL_CDE = t_bag_tag.OP_AL_CDE             AND TEMP.OP_FLT_NUM = t_bag_tag.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = t_bag_tag.FLT_SCHED_DTM AND TEMP.BAG_ID = t_bag_tag.BAG_ID AND             TEMP.BAG_PSGR_SEQ_NUM = t_bag_tag.BAG_PSGR_SEQ_NUM )</value>
+  </data>
+  <data name="BagsDeleteNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>delete from tempT_Bag_Tag where exists (select  1  FROM t_bag_tag where tempT_Bag_Tag.OP_AL_CDE = t_bag_tag.OP_AL_CDE AND tempT_Bag_Tag.OP_FLT_NUM = t_bag_tag.OP_FLT_NUM AND tempT_Bag_Tag.FLT_SCHED_DTM = t_bag_tag.FLT_SCHED_DTM AND tempT_Bag_Tag.BAG_ID = t_bag_tag.BAG_ID AND            tempT_Bag_Tag.BAG_PSGR_SEQ_NUM = t_bag_tag.BAG_PSGR_SEQ_NUM )</value>
+  </data>
+  <data name="BagsInsertOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>select temp.* from tempT_Bag_Tag temp where exists (select  1  FROM t_bag_tag where TEMP.OP_AL_CDE = t_bag_tag.OP_AL_CDE AND TEMP.OP_FLT_NUM = t_bag_tag.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = t_bag_tag.FLT_SCHED_DTM AND TEMP.BAG_ID = t_bag_tag.BAG_ID AND             TEMP.BAG_PSGR_SEQ_NUM = t_bag_tag.BAG_PSGR_SEQ_NUM AND TEMP.MODIFIED_TIME &gt; t_bag_tag.MODIFIED_TIME AND (TEMP.SCANNED_TIME &lt;= t_bag_tag.SCANNED_TIME OR TEMP.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="BagsDeleteOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>delete from tempT_Bag_Tag where exists (select  1  FROM t_bag_tag where tempT_Bag_Tag.OP_AL_CDE = t_bag_tag.OP_AL_CDE AND tempT_Bag_Tag.OP_FLT_NUM = t_bag_tag.OP_FLT_NUM AND tempT_Bag_Tag.FLT_SCHED_DTM = t_bag_tag.FLT_SCHED_DTM AND tempT_Bag_Tag.BAG_ID = t_bag_tag.BAG_ID AND           tempT_Bag_Tag.BAG_PSGR_SEQ_NUM = t_bag_tag.BAG_PSGR_SEQ_NUM             AND tempT_Bag_Tag.MODIFIED_TIME &gt; t_bag_tag.MODIFIED_TIME AND (tempT_Bag_Tag.SCANNED_TIME &lt;= t_bag_tag.SCANNED_TIME OR tempT_Bag_Tag.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="BagsSelectNonOverridingFieldsCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, OP_FLT_NUM, FLT_SCHED_DTM, BAG_ID, BAG_PSGR_SEQ_NUM, AP_CDE, BAG_TYP_CDE, BAG_TAG_CRTN_DTM, DEST_AP_CDE, BSM_CRTN_DTM, BAG_CRTN_TYP_CDE, BSM_DEL_IND, LD_AUTH_IND, SCRTY_STATS_CDE, CBN_CL_CDE, LD_STATS_CDE, OFLD_IND, LD_SEQ_NUM, RLBL_IND, XPDT_IND, BAG_WT_LB, DMGD_IND, TRKG_IND, SHRT_CONN_FLT_IND, UPDT_TMS, MODIFIED_TIME FROM T_Bag_Tag</value>
+  </data>
+  <data name="BagsSkipRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Bag_Tag where exists (select  1  FROM t_bag_tag where tempT_Bag_Tag.OP_AL_CDE = t_bag_tag.OP_AL_CDE AND tempT_Bag_Tag.OP_FLT_NUM = t_bag_tag.OP_FLT_NUM AND tempT_Bag_Tag.FLT_SCHED_DTM = t_bag_tag.FLT_SCHED_DTM AND tempT_Bag_Tag.BAG_ID = t_bag_tag.BAG_ID AND          tempT_Bag_Tag.BAG_PSGR_SEQ_NUM = t_bag_tag.BAG_PSGR_SEQ_NUM             AND tempT_Bag_Tag.MODIFIED_TIME = t_bag_tag.MODIFIED_TIME             AND ((tempT_Bag_Tag.SCANNED_TIME IS NULL AND t_bag_tag.SCANNED_TIME IS NULL) OR (tempT_Bag_Tag.SCANNED_TIME = t_bag_tag.SCANNED_TIME)             OR (tempT_Bag_Tag.SCANNED_TIME &lt; t_bag_tag.SCANNED_TIME) OR (tempT_Bag_Tag.SCANNED_TIME IS NULL)))</value>
+  </data>
+  <data name="BagsSelectTempRecordsCommand" xml:space="preserve">
+    <value>select * from tempT_Bag_Tag</value>
+  </data>
+  <data name="BagsDeleteTempRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Bag_Tag</value>
+  </data>
+  <data name="ErrorCodeAlias" xml:space="preserve">
+    <value>ErrorCodes</value>
+  </data>
+  <data name="ErrorCodeCommodityName" xml:space="preserve">
+    <value>ERRORCODES</value>
+  </data>
+  <data name="ErrorCodeCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Error_Code("CODE nvarchar(10), TYPE nvarchar(10) NOT NULL, DESCRIP nvarchar(250) NOT NULL, SEVERITY_LEVEL nvarchar(2) NOT NULL, ACTION nvarchar(20) NOT NULL, MODIFIED_TIME datetime NOT NULL, CONSTRAINT pkErrCode PRIMARY KEY(CODE))</value>
+  </data>
+  <data name="ErrorCodeDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Error_Code] WHERE (([CODE] = @p1) AND ([TYPE] = @p2) AND ([DESCRIP] = @p3) AND ([SEVERITY_LEVEL] = @p4) AND ([ACTION] = @p5) AND ([MODIFIED_TIME] = @p6))</value>
+  </data>
+  <data name="ErrorCodeDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="ErrorCodeIndexCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ErrorCodeInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Error_Code] ([CODE], [TYPE], [DESCRIP], [SEVERITY_LEVEL], [ACTION], [MODIFIED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)</value>
+  </data>
+  <data name="ErrorCodeScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="ErrorCodeSelectCommand" xml:space="preserve">
+    <value>SELECT CODE, TYPE, DESCRIP, SEVERITY_LEVEL, ACTION, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME FROM T_Error_Code</value>
+  </data>
+  <data name="ErrorCodeTableName" xml:space="preserve">
+    <value>T_Error_Code</value>
+  </data>
+  <data name="ErrorCodeUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Error_Code] SET [CODE] = @p1, [TYPE] = @p2, [DESCRIP] = @p3, [SEVERITY_LEVEL] = @p4, [ACTION] = @p5, [MODIFIED_TIME] = @p6 WHERE (([CODE] = @p7) AND ([TYPE] = @p8) AND ([DESCRIP] = @p9) AND ([SEVERITY_LEVEL] = @p10) AND ([ACTION] = @p11) AND ([MODIFIED_TIME] = @p12))</value>
+  </data>
+  <data name="ErrorCodeUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ErrorCodeUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FlightAlias" xml:space="preserve">
+    <value>Flight</value>
+  </data>
+  <data name="FlightCommodityName" xml:space="preserve">
+    <value>FLIGHT</value>
+  </data>
+  <data name="FlightCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Flight_Info("AP_CDE nvarchar(5), OP_AL_CDE nvarchar(3), FLT_SCHED_DTM datetime, OP_FLT_NUM numeric(4,0), ISNEWREQUEST nvarchar(5), ARR_DPTR_CDE nvarchar(1), LEG_SEQ_NUM numeric(2), AC_NOSE_NUM nvarchar(5) NOT NULL, ORIG_DEST_IND nvarchar(1) NOT NULL, PRE_CLOSE nvarchar(1) NOT NULL, IS_CLOSE nvarchar(1) NOT NULL, MODIFIED_TIME datetime NOT NULL, CONSTRAINT pkFltinfo PRIMARY KEY(AP_CDE, OP_AL_CDE, FLT_SCHED_DTM, OP_FLT_NUM,ARR_DPTR_CDE, LEG_SEQ_NUM))</value>
+  </data>
+  <data name="FlightDeleteCommand" xml:space="preserve">
+    <value>Delete:DELETE FROM [T_Flight_Info] WHERE (([AP_CDE] = @p1) AND ([OP_AL_CDE] = @p2) AND ([FLT_SCHED_DTM] = @p3) AND ([OP_FLT_NUM] = @p4) AND ((@p5 = 1 AND [ISNEWREQUEST] IS NULL) OR ([ISNEWREQUEST] = @p6)) AND ([ARR_DPTR_CDE] = @p7) AND ([LEG_SEQ_NUM] = @p8) AND ([AC_NOSE_NUM] = @p9) AND ([ORIG_DEST_IND] = @p10) AND ([PRE_CLOSE] = @p11) AND ([IS_CLOSE] = @p12) AND ([MODIFIED_TIME] = @p13))</value>
+  </data>
+  <data name="FlightDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="FlightIndexCommand" xml:space="preserve">
+    <value>create index fltinfoselectindex on T_Flight_Info (MODIFIED_TIME)</value>
+  </data>
+  <data name="FlightInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Flight_Info] ([AP_CDE], [OP_AL_CDE], [FLT_SCHED_DTM], [OP_FLT_NUM], [ISNEWREQUEST], [ARR_DPTR_CDE], [LEG_SEQ_NUM], [AC_NOSE_NUM], [ORIG_DEST_IND], [PRE_CLOSE], [IS_CLOSE], [MODIFIED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)</value>
+  </data>
+  <data name="FlightScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FlightSelectCommand" xml:space="preserve">
+    <value>SELECT AP_CDE, OP_AL_CDE, FLT_SCHED_DTM, OP_FLT_NUM, ISNEWREQUEST, ARR_DPTR_CDE, LEG_SEQ_NUM, AC_NOSE_NUM, ORIG_DEST_IND, PRE_CLOSE, IS_CLOSE, MODIFIED_TIME FROM T_Flight_Info</value>
+  </data>
+  <data name="FlightTableName" xml:space="preserve">
+    <value>T_Flight_Info</value>
+  </data>
+  <data name="FlightUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Flight_Info] SET [AP_CDE] = @p1, [OP_AL_CDE] = @p2, [FLT_SCHED_DTM] = @p3, [OP_FLT_NUM] = @p4, [ISNEWREQUEST] = @p5, [ARR_DPTR_CDE] = @p6, [LEG_SEQ_NUM] = @p7, [AC_NOSE_NUM] = @p8, [ORIG_DEST_IND] = @p9, [PRE_CLOSE] = @p10, [IS_CLOSE] = @p11, [MODIFIED_TIME] = @p12 WHERE (([AP_CDE] = @p13) AND ([OP_AL_CDE] = @p14) AND ([FLT_SCHED_DTM] = @p15) AND ([OP_FLT_NUM] = @p16) AND ((@p17 = 1 AND [ISNEWREQUEST] IS NULL) OR ([ISNEWREQUEST] = @p18)) AND ([ARR_DPTR_CDE] = @p19) AND ([LEG_SEQ_NUM] = @p20) AND ([AC_NOSE_NUM] = @p21) AND ([ORIG_DEST_IND] = @p22) AND ([PRE_CLOSE] = @p23) AND ([IS_CLOSE] = @p24) AND ([MODIFIED_TIME] = @p25))</value>
+  </data>
+  <data name="FlightUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FlightUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FreightAlias" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+  <data name="FreightCommodityName" xml:space="preserve">
+    <value>FREIGHT</value>
+  </data>
+  <data name="FreightCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Freight("OP_AL_CDE nvarchar(3), AP_CDE nvarchar(5), OP_FLT_NUM numeric(4,0), FLT_SCHED_DTM datetime, ARR_DPTR_CDE nvarchar(1), AWB_NUM nvarchar(18), WF_SCRN_LIN_ITM_NUM numeric(4,0) NULL, CMDTY_TYP_CDE nvarchar(8) NOT NULL, ITM_CNT numeric(4) NOT NULL, ITM_WT_LB numeric(6,1) NOT NULL, AVG_ITM_WT_LB numeric(6,1) NOT NULL, DEST_AP_CDE nvarchar(5) NOT NULL, FNL_DEST_AP_CDE nvarchar(5) NULL, THRU_IND nvarchar(1) NOT NULL, POS_NUM nvarchar(2) NULL, PREV_POS_NUM nvarchar(2) NULL, LOAD_SEQ_NUM numeric(3) NULL, LOAD_IND nvarchar(1) NOT NULL, SCN_IND nvarchar(1) NULL, SCN_DTM datetime  NULL, CNTNR_SEQ_NUM numeric(6) NULL, XPDT_IND nvarchar(1) NULL, DNGR_FRGT_IND nvarchar(1) NULL, FRGT_STG_LOC_CDE nvarchar(11) NULL, PREV_FRGT_STG_LOC_CDE nvarchar(11) NULL, MODIFIED_TIME datetime NOT NULL, SCANNED_TIME datetime NOT NULL, CONSTRAINT pkFreight PRIMARY KEY(OP_AL_CDE, AP_CDE, OP_FLT_NUM, FLT_SCHED_DTM,ARR_DPTR_CDE, AWB_NUM))</value>
+  </data>
+  <data name="FreightDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Freight] WHERE (([OP_AL_CDE] = @p1) AND ([AP_CDE] = @p2) AND ([OP_FLT_NUM] = @p3) AND ([FLT_SCHED_DTM] = @p4) AND ([ARR_DPTR_CDE] = @p5) AND ([AWB_NUM] = @p6) AND ((@p7 = 1 AND [WF_SCRN_LIN_ITM_NUM] IS NULL) OR ([WF_SCRN_LIN_ITM_NUM] = @p8)) AND ([CMDTY_TYP_CDE] = @p9) AND ([ITM_CNT] = @p10) AND ([ITM_WT_LB] = @p11) AND ([AVG_ITM_WT_LB] = @p12) AND ([DEST_AP_CDE] = @p13) AND ((@p14 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p15)) AND ([THRU_IND] = @p16) AND ((@p17 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p18)) AND ((@p19 = 1 AND [PREV_POS_NUM] IS NULL) OR ([PREV_POS_NUM] = @p20)) AND ((@p21 = 1 AND [LOAD_SEQ_NUM] IS NULL) OR ([LOAD_SEQ_NUM] = @p22)) AND ([LOAD_IND] = @p23) AND ((@p24 = 1 AND [SCN_IND] IS NULL) OR ([SCN_IND] = @p25)) AND ((@p26 = 1 AND [SCN_DTM] IS NULL) OR ([SCN_DTM] = @p27)) AND ((@p28 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p29)) AND ((@p30 = 1 AND [XPDT_IND] IS NULL) OR ([XPDT_IND] = @p31)) AND ((@p32 = 1 AND [DNGR_FRGT_IND] IS NULL) OR ([DNGR_FRGT_IND] = @p33)) AND ((@p34 = 1 AND [FRGT_STG_LOC_CDE] IS NULL) OR ([FRGT_STG_LOC_CDE] = @p35)) AND ((@p36 = 1 AND [PREV_FRGT_STG_LOC_CDE] IS NULL) OR ([PREV_FRGT_STG_LOC_CDE] = @p37)) AND ([MODIFIED_TIME] = @p38) AND ([SCANNED_TIME] = @p39))</value>
+  </data>
+  <data name="FreightDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="FreightIndexCommand" xml:space="preserve">
+    <value>create index freightselectindex on T_Freight (SCANNED_TIME, MODIFIED_TIME)</value>
+  </data>
+  <data name="FreightInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Freight] ([OP_AL_CDE], [AP_CDE], [OP_FLT_NUM], [FLT_SCHED_DTM], [ARR_DPTR_CDE], [AWB_NUM], [WF_SCRN_LIN_ITM_NUM], [CMDTY_TYP_CDE], [ITM_CNT], [ITM_WT_LB], [AVG_ITM_WT_LB], [DEST_AP_CDE], [FNL_DEST_AP_CDE], [THRU_IND], [POS_NUM], [PREV_POS_NUM], [LOAD_SEQ_NUM], [LOAD_IND], [SCN_IND], [SCN_DTM], [CNTNR_SEQ_NUM], [XPDT_IND], [DNGR_FRGT_IND], [FRGT_STG_LOC_CDE], [PREV_FRGT_STG_LOC_CDE], [MODIFIED_TIME], [SCANNED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27)</value>
+  </data>
+  <data name="FreightScanApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="FreightSelectCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, AP_CDE, OP_FLT_NUM, convert(nvarchar,FLT_SCHED_DTM,23) as FLT_SCHED_DTM, ARR_DPTR_CDE, AWB_NUM, coalesce(WF_SCRN_LIN_ITM_NUM, '" &amp; String.Empty &amp; "') as WF_SCRN_LIN_ITM_NUM, CMDTY_TYP_CDE, ITM_CNT, ITM_WT_LB, AVG_ITM_WT_LB, DEST_AP_CDE, coalesce(FNL_DEST_AP_CDE, '" &amp; String.Empty &amp; "') as FNL_DEST_AP_CDE, THRU_IND, coalesce(POS_NUM, '" &amp; String.Empty &amp; "') as POS_NUM, coalesce(PREV_POS_NUM, '" &amp; String.Empty &amp; "') as PREV_POS_NUM, coalesce(LOAD_SEQ_NUM, '" &amp; String.Empty &amp; "') as LOAD_SEQ_NUM, LOAD_IND, coalesce(SCN_IND, '" &amp; String.Empty &amp; "') as SCN_IND, coalesce(convert(nvarchar, SCN_DTM,20), '" &amp; String.Empty &amp; "') as SCN_DTM, coalesce(CNTNR_SEQ_NUM, '" &amp; String.Empty &amp; "') as CNTNR_SEQ_NUM, coalesce(XPDT_IND, '" &amp; String.Empty &amp; "') as XPDT_IND, coalesce(DNGR_FRGT_IND, '" &amp; String.Empty &amp; "') as DNGR_FRGT_IND, coalesce(FRGT_STG_LOC_CDE, '" &amp; String.Empty &amp; "') as FRGT_STG_LOC_CDE, coalesce(PREV_FRGT_STG_LOC_CDE, '" &amp; String.Empty &amp; "') as PREV_FRGT_STG_LOC_CDE, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME, coalesce(convert(nvarchar, SCANNED_TIME,20), '" &amp; String.Empty &amp; "') as SCANNED_TIME FROM T_Freight</value>
+  </data>
+  <data name="FreightTableName" xml:space="preserve">
+    <value>T_Freight</value>
+  </data>
+  <data name="FreightUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Freight] SET [OP_AL_CDE] = @p1, [AP_CDE] = @p2, [OP_FLT_NUM] = @p3, [FLT_SCHED_DTM] = @p4, [ARR_DPTR_CDE] = @p5, [AWB_NUM] = @p6, [WF_SCRN_LIN_ITM_NUM] = @p7, [CMDTY_TYP_CDE] = @p8, [ITM_CNT] = @p9, [ITM_WT_LB] = @p10, [AVG_ITM_WT_LB] = @p11, [DEST_AP_CDE] = @p12, [FNL_DEST_AP_CDE] = @p13, [THRU_IND] = @p14, [POS_NUM] = @p15, [PREV_POS_NUM] = @p16, [LOAD_SEQ_NUM] = @p17, [LOAD_IND] = @p18, [SCN_IND] = @p19, [SCN_DTM] = @p20, [CNTNR_SEQ_NUM] = @p21, [XPDT_IND] = @p22, [DNGR_FRGT_IND] = @p23, [FRGT_STG_LOC_CDE] = @p24, [PREV_FRGT_STG_LOC_CDE] = @p25, [MODIFIED_TIME] = @p26, [SCANNED_TIME] = @p27 WHERE (([OP_AL_CDE] = @p28) AND ([AP_CDE] = @p29) AND ([OP_FLT_NUM] = @p30) AND ([FLT_SCHED_DTM] = @p31) AND ([ARR_DPTR_CDE] = @p32) AND ([AWB_NUM] = @p33) AND ((@p34 = 1 AND [WF_SCRN_LIN_ITM_NUM] IS NULL) OR ([WF_SCRN_LIN_ITM_NUM] = @p35)) AND ([CMDTY_TYP_CDE] = @p36) AND ([ITM_CNT] = @p37) AND ([ITM_WT_LB] = @p38) AND ([AVG_ITM_WT_LB] = @p39) AND ([DEST_AP_CDE] = @p40) AND ((@p41 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p42)) AND ([THRU_IND] = @p43) AND ((@p44 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p45)) AND ((@p46 = 1 AND [PREV_POS_NUM] IS NULL) OR ([PREV_POS_NUM] = @p47)) AND ((@p48 = 1 AND [LOAD_SEQ_NUM] IS NULL) OR ([LOAD_SEQ_NUM] = @p49)) AND ([LOAD_IND] = @p50) AND ((@p51 = 1 AND [SCN_IND] IS NULL) OR ([SCN_IND] = @p52)) AND ((@p53 = 1 AND [SCN_DTM] IS NULL) OR ([SCN_DTM] = @p54)) AND ((@p55 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p56)) AND ((@p57 = 1 AND [XPDT_IND] IS NULL) OR ([XPDT_IND] = @p58)) AND ((@p59 = 1 AND [DNGR_FRGT_IND] IS NULL) OR ([DNGR_FRGT_IND] = @p60)) AND ((@p61 = 1 AND [FRGT_STG_LOC_CDE] IS NULL) OR ([FRGT_STG_LOC_CDE] = @p62)) AND ((@p63 = 1 AND [PREV_FRGT_STG_LOC_CDE] IS NULL) OR ([PREV_FRGT_STG_LOC_CDE] = @p64)) AND ([MODIFIED_TIME] = @p65) AND ([SCANNED_TIME] = @p66))</value>
+  </data>
+  <data name="FreightUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FreightUploadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="FreightInsertNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>select temp.* from tempT_Freight temp where not exists (select  1  FROM T_Freight where TEMP.OP_AL_CDE = T_Freight.OP_AL_CDE             AND TEMP.OP_FLT_NUM = T_Freight.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = T_Freight.FLT_SCHED_DTM AND TEMP.ARR_DPTR_CDE = T_Freight.ARR_DPTR_CDE AND TEMP.AWB_NUM = T_Freight.AWB_NUM)</value>
+  </data>
+  <data name="FreightDeleteNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>delete from tempT_Freight where exists (select  1  FROM T_Freight where tempT_Freight.OP_AL_CDE = T_Freight.OP_AL_CDE AND tempT_Freight.OP_FLT_NUM = T_Freight.OP_FLT_NUM AND tempT_Freight.FLT_SCHED_DTM = T_Freight.FLT_SCHED_DTM AND tempT_Freight.ARR_DPTR_CDE = T_Freight.ARR_DPTR_CDE AND             tempT_Freight.AWB_NUM = T_Freight.AWB_NUM )</value>
+  </data>
+  <data name="FreightInsertOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>select temp.* from tempT_Freight temp where exists (select  1  FROM T_Freight where TEMP.OP_AL_CDE = T_Freight.OP_AL_CDE AND TEMP.OP_FLT_NUM = T_Freight.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = T_Freight.FLT_SCHED_DTM AND TEMP.ARR_DPTR_CDE = T_Freight.ARR_DPTR_CDE AND TEMP.AWB_NUM = T_Freight.AWB_NUM AND TEMP.MODIFIED_TIME &gt; T_Freight.MODIFIED_TIME AND (TEMP.SCANNED_TIME &lt;= T_Freight.SCANNED_TIME OR TEMP.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="FreightDeleteOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>delete from tempT_Freight where exists (select  1  FROM T_Freight where tempT_Freight.OP_AL_CDE = T_Freight.OP_AL_CDE AND tempT_Freight.OP_FLT_NUM = T_Freight.OP_FLT_NUM AND tempT_Freight.FLT_SCHED_DTM = T_Freight.FLT_SCHED_DTM AND tempT_Freight.ARR_DPTR_CDE = T_Freight.ARR_DPTR_CDE AND             tempT_Freight.AWB_NUM = T_Freight.AWB_NUM AND tempT_Freight.MODIFIED_TIME &gt; T_Freight.MODIFIED_TIME AND (tempT_Freight.SCANNED_TIME &lt; T_Freight.SCANNED_TIME OR tempT_Freight.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="FreightSelectNonOverridingFieldsCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, AP_CDE, OP_FLT_NUM, FLT_SCHED_DTM, ARR_DPTR_CDE, AWB_NUM, WF_SCRN_LIN_ITM_NUM, CMDTY_TYP_CDE, ITM_CNT, ITM_WT_LB, AVG_ITM_WT_LB, DEST_AP_CDE, FNL_DEST_AP_CDE, THRU_IND, LOAD_SEQ_NUM, LOAD_IND, SCN_IND, SCN_DTM, CNTNR_SEQ_NUM, XPDT_IND, DNGR_FRGT_IND, FRGT_STG_LOC_CDE, PREV_FRGT_STG_LOC_CDE, MODIFIED_TIME FROM T_Freight</value>
+  </data>
+  <data name="FreightSkipRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Freight where exists (select  1  FROM T_Freight where tempT_Freight.OP_AL_CDE = T_Freight.OP_AL_CDE AND tempT_Freight.OP_FLT_NUM = T_Freight.OP_FLT_NUM AND tempT_Freight.FLT_SCHED_DTM = T_Freight.FLT_SCHED_DTM AND tempT_Freight.ARR_DPTR_CDE = T_Freight.ARR_DPTR_CDE AND            tempT_Freight.AWB_NUM = T_Freight.AWB_NUM AND tempT_Freight.MODIFIED_TIME = T_Freight.MODIFIED_TIME AND ((tempT_Freight.SCANNED_TIME IS NULL AND T_Freight.SCANNED_TIME IS NULL) OR (tempT_Freight.SCANNED_TIME = T_Freight.SCANNED_TIME)             OR (tempT_Freight.SCANNED_TIME &lt; T_Freight.SCANNED_TIME) OR (tempT_Freight.SCANNED_TIME IS NULL)))</value>
+  </data>
+  <data name="FreightSelectTempRecordsCommand" xml:space="preserve">
+    <value>select * from tempT_Freight</value>
+  </data>
+  <data name="FreightDeleteTempRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Freight</value>
+  </data>
+  <data name="LineItemAlias" xml:space="preserve">
+    <value>LineItem</value>
+  </data>
+  <data name="LineItemCommodityName" xml:space="preserve">
+    <value>LINEITEM</value>
+  </data>
+  <data name="LineItemCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Line_Item("OP_AL_CDE nvarchar(3) NOT NULL, OP_FLT_NUM numeric(4,0), FLT_SCHED_DTM datetime, LIN_ITEM_SEQ_NUM numeric(7) NOT NULL, MSG_LIN_NUM nvarchar(4) NULL, POS_NUM nvarchar(2) NOT NULL, CNTNR_ID nvarchar(10) NULL, CMDTY_TYP_CDE nvarchar(8) NOT NULL, THRU_IND nvarchar(1) NOT NULL, FNL_DEST_AP_CD nvarchar(5) NOT NULL, AOT_CGO_WT_LBS numeric(6,1) NULL, AOT_CGO_PCS_CNT numeric(5) NULL, WF_CGO_WT_LBS numeric(6,1) NULL, WF_CGO_PCS_CNT numeric(5) NULL, SCNR_ID nvarchar(6) NOT NULL, USR_ID nvarchar(6) NOT NULL, RMK_TXT nvarchar(15) NULL, MODIFIED_TIME datetime NOT NULL, SCANNED_TIME datetime NOT NULL, CONSTRAINT pkLineItem PRIMARY KEY(OP_FLT_NUM, FLT_SCHED_DTM))</value>
+  </data>
+  <data name="LineItemDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Line_Item] WHERE (([OP_AL_CDE] = @p1) AND ([OP_FLT_NUM] = @p2) AND ([FLT_SCHED_DTM] = @p3) AND ([LIN_ITEM_SEQ_NUM] = @p4) AND ((@p5 = 1 AND [MSG_LIN_NUM] IS NULL) OR ([MSG_LIN_NUM] = @p6)) AND ([POS_NUM] = @p7) AND ((@p8 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p9)) AND ([CMDTY_TYP_CDE] = @p10) AND ([THRU_IND] = @p11) AND ([FNL_DEST_AP_CD] = @p12) AND ((@p13 = 1 AND [AOT_CGO_WT_LBS] IS NULL) OR ([AOT_CGO_WT_LBS] = @p14)) AND ((@p15 = 1 AND [AOT_CGO_PCS_CNT] IS NULL) OR ([AOT_CGO_PCS_CNT] = @p16)) AND ((@p17 = 1 AND [WF_CGO_WT_LBS] IS NULL) OR ([WF_CGO_WT_LBS] = @p18)) AND ((@p19 = 1 AND [WF_CGO_PCS_CNT] IS NULL) OR ([WF_CGO_PCS_CNT] = @p20)) AND ([SCNR_ID] = @p21) AND ([USR_ID] = @p22) AND ((@p23 = 1 AND [RMK_TXT] IS NULL) OR ([RMK_TXT] = @p24)) AND ([MODIFIED_TIME] = @p25) AND ([SCANNED_TIME] = @p26))</value>
+  </data>
+  <data name="LineItemDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="LineItemIndexCommand" xml:space="preserve">
+    <value>create index lineitemselectindex on T_Line_Item (SCANNED_TIME, MODIFIED_TIME)</value>
+  </data>
+  <data name="LineItemInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Line_Item] ([OP_AL_CDE], [OP_FLT_NUM], [FLT_SCHED_DTM], [LIN_ITEM_SEQ_NUM], [MSG_LIN_NUM], [POS_NUM], [CNTNR_ID], [CMDTY_TYP_CDE], [THRU_IND], [FNL_DEST_AP_CD], [AOT_CGO_WT_LBS], [AOT_CGO_PCS_CNT], [WF_CGO_WT_LBS], [WF_CGO_PCS_CNT], [SCNR_ID], [USR_ID], [RMK_TXT], [MODIFIED_TIME], [SCANNED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)</value>
+  </data>
+  <data name="LineItemScanApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="LineItemSelectCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, OP_FLT_NUM, convert(nvarchar,FLT_SCHED_DTM,23) as FLT_SCHED_DTM, LIN_ITEM_SEQ_NUM, coalesce(MSG_LIN_NUM, '" &amp; String.Empty &amp; "') as MSG_LIN_NUM, coalesce(POS_NUM, '" &amp; String.Empty &amp; "') as POS_NUM, coalesce(CNTNR_ID, '" &amp; String.Empty &amp; "') as CNTNR_ID, CMDTY_TYP_CDE, THRU_IND, FNL_DEST_AP_CD, coalesce(AOT_CGO_WT_LBS, '" &amp; String.Empty &amp; "') as AOT_CGO_WT_LBS, coalesce(AOT_CGO_PCS_CNT, '" &amp; String.Empty &amp; "') as AOT_CGO_PCS_CNT, coalesce(WF_CGO_WT_LBS, '" &amp; String.Empty &amp; "') as WF_CGO_WT_LBS, coalesce(WF_CGO_PCS_CNT, '" &amp; String.Empty &amp; "') as WF_CGO_PCS_CNT, SCNR_ID, USR_ID, coalesce(RMK_TXT, '" &amp; String.Empty &amp; "') as RMK_TXT, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME, coalesce(convert(nvarchar, SCANNED_TIME,20), '" &amp; String.Empty &amp; "') as SCANNED_TIME FROM T_Line_Item</value>
+  </data>
+  <data name="LineItemTableName" xml:space="preserve">
+    <value>T_Line_Item</value>
+  </data>
+  <data name="LineItemUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Line_Item] SET [OP_AL_CDE] = @p1, [OP_FLT_NUM] = @p2, [FLT_SCHED_DTM] = @p3, [LIN_ITEM_SEQ_NUM] = @p4, [MSG_LIN_NUM] = @p5, [POS_NUM] = @p6, [CNTNR_ID] = @p7, [CMDTY_TYP_CDE] = @p8, [THRU_IND] = @p9, [FNL_DEST_AP_CD] = @p10, [AOT_CGO_WT_LBS] = @p11, [AOT_CGO_PCS_CNT] = @p12, [WF_CGO_WT_LBS] = @p13, [WF_CGO_PCS_CNT] = @p14, [SCNR_ID] = @p15, [USR_ID] = @p16, [RMK_TXT] = @p17, [MODIFIED_TIME] = @p18, [SCANNED_TIME] = @p19 WHERE (([OP_AL_CDE] = @p20) AND ([OP_FLT_NUM] = @p21) AND ([FLT_SCHED_DTM] = @p22) AND ([LIN_ITEM_SEQ_NUM] = @p23) AND ((@p24 = 1 AND [MSG_LIN_NUM] IS NULL) OR ([MSG_LIN_NUM] = @p25)) AND ([POS_NUM] = @p26) AND ((@p27 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p28)) AND ([CMDTY_TYP_CDE] = @p29) AND ([THRU_IND] = @p30) AND ([FNL_DEST_AP_CD] = @p31) AND ((@p32 = 1 AND [AOT_CGO_WT_LBS] IS NULL) OR ([AOT_CGO_WT_LBS] = @p33)) AND ((@p34 = 1 AND [AOT_CGO_PCS_CNT] IS NULL) OR ([AOT_CGO_PCS_CNT] = @p35)) AND ((@p36 = 1 AND [WF_CGO_WT_LBS] IS NULL) OR ([WF_CGO_WT_LBS] = @p37)) AND ((@p38 = 1 AND [WF_CGO_PCS_CNT] IS NULL) OR ([WF_CGO_PCS_CNT] = @p39)) AND ([SCNR_ID] = @p40) AND ([USR_ID] = @p41) AND ((@p42 = 1 AND [RMK_TXT] IS NULL) OR ([RMK_TXT] = @p43)) AND ([MODIFIED_TIME] = @p44) AND ([SCANNED_TIME] = @p45))</value>
+  </data>
+  <data name="LineItemUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LineItemUploadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="LineItemInsertNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>select temp.* from tempT_Line_Item temp where not exists (select  1  FROM T_Line_Item where TEMP.OP_FLT_NUM = T_Line_Item.OP_FLT_NUM             AND TEMP.FLT_SCHED_DTM = T_Line_Item.FLT_SCHED_DTM)</value>
+  </data>
+  <data name="LineItemDeleteNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>delete from tempT_Line_Item where exists (select  1  FROM T_Line_Item where AND tempT_Line_Item.OP_FLT_NUM = T_Line_Item.OP_FLT_NUM             AND tempT_Line_Item.FLT_SCHED_DTM = T_Line_Item.FLT_SCHED_DTM)</value>
+  </data>
+  <data name="LineItemInsertOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>select temp.* from tempT_Line_Item temp where exists (select  1  FROM T_Line_Item where AND TEMP.OP_FLT_NUM = T_Line_Item.OP_FLT_NUM             AND TEMP.FLT_SCHED_DTM = T_Line_Item.FLT_SCHED_DTM AND TEMP.MODIFIED_TIME &gt; T_Line_Item.MODIFIED_TIME AND (TEMP.SCANNED_TIME &lt;= T_Line_Item.SCANNED_TIME OR TEMP.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="LineItemDeleteOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>delete from tempT_Line_Item where exists (select  1  FROM T_Line_Item where AND tempT_Line_Item.OP_FLT_NUM = T_Line_Item.OP_FLT_NUM             AND tempT_Line_Item.FLT_SCHED_DTM = T_Line_Item.FLT_SCHED_DTM             AND tempT_Line_Item.MODIFIED_TIME &gt; T_Line_Item.MODIFIED_TIME AND (tempT_Line_Item.SCANNED_TIME &lt;= T_Line_Item.SCANNED_TIME OR tempT_Line_Item.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="LineItemSelectNonOverridingFieldsCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LineItemSkipRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Line_Item where exists (select  1  FROM T_Line_Item where AND tempT_Line_Item.OP_FLT_NUM = T_Line_Item.OP_FLT_NUM             AND tempT_Line_Item.FLT_SCHED_DTM = T_Line_Item.FLT_SCHED_DTM             AND tempT_Line_Item.MODIFIED_TIME = T_Line_Item.MODIFIED_TIME             AND ((tempT_Line_Item.SCANNED_TIME IS NULL AND T_Line_Item.SCANNED_TIME IS NULL) OR (tempT_Line_Item.SCANNED_TIME = T_Line_Item.SCANNED_TIME)             OR (tempT_Line_Item.SCANNED_TIME &lt; T_Line_Item.SCANNED_TIME)             OR (tempT_Line_Item.SCANNED_TIME IS NULL)))</value>
+  </data>
+  <data name="LineItemSelectTempRecordsCommand" xml:space="preserve">
+    <value>select * from tempT_Line_Item</value>
+  </data>
+  <data name="LineItemDeleteTempRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Line_Item</value>
+  </data>
+  <data name="MailAlias" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="MailCommodityName" xml:space="preserve">
+    <value>MAIL</value>
+  </data>
+  <data name="MailCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Mail("MAIL_UNIT_SEQ_NUM numeric(7), MAIL_BRCD_ID nvarchar(30) NULL, AP_CDE nvarchar(5) NULL, OP_AL_CDE nvarchar(3) NOT NULL, OP_FLT_NUM numeric(4,0) NULL, FLT_SCHED_DTM datetime NULL, DEST_AP_CDE nvarchar(5) NULL, FNL_DEST_AP_CDE nvarchar(5) NULL, POS_ID nvarchar(2) NULL, CNTNR_SEQ_NUM numeric(6) NULL, LD_SEQ_NUM numeric(4) NULL, CMDTY_TYP_CDE nvarchar(8) NULL, TOT_WT_LB numeric(6,1) NULL, ITM_CNT numeric(5) NULL, MODIFIED_TIME datetime NOT NULL, SCANNED_TIME datetime NOT NULL, CONSTRAINT pkMail PRIMARY KEY(MAIL_UNIT_SEQ_NUM))</value>
+  </data>
+  <data name="MailDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Mail] WHERE (([MAIL_UNIT_SEQ_NUM] = @p1) AND ((@p2 = 1 AND [MAIL_BRCD_ID] IS NULL) OR ([MAIL_BRCD_ID] = @p3)) AND ((@p4 = 1 AND [AP_CDE] IS NULL) OR ([AP_CDE] = @p5)) AND ([OP_AL_CDE] = @p6) AND ((@p7 = 1 AND [OP_FLT_NUM] IS NULL) OR ([OP_FLT_NUM] = @p8)) AND ((@p9 = 1 AND [FLT_SCHED_DTM] IS NULL) OR ([FLT_SCHED_DTM] = @p10)) AND ((@p11 = 1 AND [DEST_AP_CDE] IS NULL) OR ([DEST_AP_CDE] = @p12)) AND ((@p13 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p14)) AND ((@p15 = 1 AND [POS_ID] IS NULL) OR ([POS_ID] = @p16)) AND ((@p17 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p18)) AND ((@p19 = 1 AND [LD_SEQ_NUM] IS NULL) OR ([LD_SEQ_NUM] = @p20)) AND ((@p21 = 1 AND [CMDTY_TYP_CDE] IS NULL) OR ([CMDTY_TYP_CDE] = @p22)) AND ((@p23 = 1 AND [TOT_WT_LB] IS NULL) OR ([TOT_WT_LB] = @p24)) AND ((@p25 = 1 AND [ITM_CNT] IS NULL) OR ([ITM_CNT] = @p26)) AND ([MODIFIED_TIME] = @p27) AND ([SCANNED_TIME] = @p28))</value>
+  </data>
+  <data name="MailDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="MailIndexCommand" xml:space="preserve">
+    <value>create index mailselectindex on T_Mail (SCANNED_TIME, MODIFIED_TIME)</value>
+  </data>
+  <data name="MailInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Mail] ([MAIL_UNIT_SEQ_NUM], [MAIL_BRCD_ID], [AP_CDE], [OP_AL_CDE], [OP_FLT_NUM], [FLT_SCHED_DTM], [DEST_AP_CDE], [FNL_DEST_AP_CDE], [POS_ID], [CNTNR_SEQ_NUM], [LD_SEQ_NUM], [CMDTY_TYP_CDE], [TOT_WT_LB], [ITM_CNT], [MODIFIED_TIME], [SCANNED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16)</value>
+  </data>
+  <data name="MailScanApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="MailSelectCommand" xml:space="preserve">
+    <value>SELECT MAIL_UNIT_SEQ_NUM, coalesce(MAIL_BRCD_ID, '" &amp; String.Empty &amp; "') as MAIL_BRCD_ID, coalesce(AP_CDE, '" &amp; String.Empty &amp; "') as AP_CDE, OP_AL_CDE, coalesce(OP_FLT_NUM, '" &amp; String.Empty &amp; "') as OP_FLT_NUM, coalesce(convert(nvarchar, FLT_SCHED_DTM,23), '" &amp; String.Empty &amp; "') as as FLT_SCHED_DTM, coalesce(DEST_AP_CDE, '" &amp; String.Empty &amp; "') as DEST_AP_CDE, coalesce(FNL_DEST_AP_CDE, '" &amp; String.Empty &amp; "') as FNL_DEST_AP_CDE, coalesce(POS_ID, '" &amp; String.Empty &amp; "') as POS_ID, coalesce(CNTNR_SEQ_NUM, '" &amp; String.Empty &amp; "') as CNTNR_SEQ_NUM, coalesce(LD_SEQ_NUM, '" &amp; String.Empty &amp; "') as LD_SEQ_NUM, coalesce(CMDTY_TYP_CDE, '" &amp; String.Empty &amp; "') as CMDTY_TYP_CDE, coalesce(TOT_WT_LB, '" &amp; String.Empty &amp; "') as TOT_WT_LB, coalesce(ITM_CNT, '" &amp; String.Empty &amp; "') as ITM_CNT, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME, coalesce(convert(nvarchar, SCANNED_TIME,20), '" &amp; String.Empty &amp; "') as SCANNED_TIME FROM T_Mail</value>
+  </data>
+  <data name="MailTableName" xml:space="preserve">
+    <value>T_Mail</value>
+  </data>
+  <data name="MailUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Mail] SET [MAIL_UNIT_SEQ_NUM] = @p1, [MAIL_BRCD_ID] = @p2, [AP_CDE] = @p3, [OP_AL_CDE] = @p4, [OP_FLT_NUM] = @p5, [FLT_SCHED_DTM] = @p6, [DEST_AP_CDE] = @p7, [FNL_DEST_AP_CDE] = @p8, [POS_ID] = @p9, [CNTNR_SEQ_NUM] = @p10, [LD_SEQ_NUM] = @p11, [CMDTY_TYP_CDE] = @p12, [TOT_WT_LB] = @p13, [ITM_CNT] = @p14, [MODIFIED_TIME] = @p15, [SCANNED_TIME] = @p16 WHERE (([MAIL_UNIT_SEQ_NUM] = @p17) AND ((@p18 = 1 AND [MAIL_BRCD_ID] IS NULL) OR ([MAIL_BRCD_ID] = @p19)) AND ((@p20 = 1 AND [AP_CDE] IS NULL) OR ([AP_CDE] = @p21)) AND ([OP_AL_CDE] = @p22) AND ((@p23 = 1 AND [OP_FLT_NUM] IS NULL) OR ([OP_FLT_NUM] = @p24)) AND ((@p25 = 1 AND [FLT_SCHED_DTM] IS NULL) OR ([FLT_SCHED_DTM] = @p26)) AND ((@p27 = 1 AND [DEST_AP_CDE] IS NULL) OR ([DEST_AP_CDE] = @p28)) AND ((@p29 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p30)) AND ((@p31 = 1 AND [POS_ID] IS NULL) OR ([POS_ID] = @p32)) AND ((@p33 = 1 AND [CNTNR_SEQ_NUM] IS NULL) OR ([CNTNR_SEQ_NUM] = @p34)) AND ((@p35 = 1 AND [LD_SEQ_NUM] IS NULL) OR ([LD_SEQ_NUM] = @p36)) AND ((@p37 = 1 AND [CMDTY_TYP_CDE] IS NULL) OR ([CMDTY_TYP_CDE] = @p38)) AND ((@p39 = 1 AND [TOT_WT_LB] IS NULL) OR ([TOT_WT_LB] = @p40)) AND ((@p41 = 1 AND [ITM_CNT] IS NULL) OR ([ITM_CNT] = @p42)) AND ([MODIFIED_TIME] = @p43) AND ([SCANNED_TIME] = @p44))</value>
+  </data>
+  <data name="MailUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MailUploadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="MailInsertNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>select temp.* from tempT_Mail temp where not exists (select  1  FROM T_Mail where TEMP.MAIL_UNIT_SEQ_NUM = T_Mail.MAIL_UNIT_SEQ_NUM)</value>
+  </data>
+  <data name="MailDeleteNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>delete from tempT_Mail where exists (select  1  FROM T_Mail where tempT_Mail.MAIL_UNIT_SEQ_NUM = T_Mail.MAIL_UNIT_SEQ_NUM)</value>
+  </data>
+  <data name="MailInsertOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>select temp.* from tempT_Mail temp where exists (select  1  FROM T_Mail where TEMP.MAIL_UNIT_SEQ_NUM = T_Mail.MAIL_UNIT_SEQ_NUM             AND TEMP.MODIFIED_TIME &gt; T_Mail.MODIFIED_TIME AND (TEMP.SCANNED_TIME &lt;= T_Mail.SCANNED_TIME OR TEMP.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="MailDeleteOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>delete from tempT_Mail where exists (select  1  FROM T_Mail where tempT_Mail.MAIL_UNIT_SEQ_NUM = T_Mail.MAIL_UNIT_SEQ_NUM AND tempT_Mail.MODIFIED_TIME &gt; T_Mail.MODIFIED_TIME AND (tempT_Mail.SCANNED_TIME &lt;= T_Mail.SCANNED_TIME OR tempT_Mail.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="MailSelectNonOverridingFieldsCommand" xml:space="preserve">
+    <value>SELECT MAIL_UNIT_SEQ_NUM, MAIL_BRCD_ID, AP_CDE, OP_AL_CDE, OP_FLT_NUM, FLT_SCHED_DTM, DEST_AP_CDE, FNL_DEST_AP_CDE, CNTNR_SEQ_NUM, LD_SEQ_NUM, CMDTY_TYP_CDE, TOT_WT_LB, ITM_CNT, MODIFIED_TIME FROM T_Mail</value>
+  </data>
+  <data name="MailSkipRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Mail where exists (select  1  FROM T_Mail where tempT_Mail.MAIL_UNIT_SEQ_NUM = T_Mail.MAIL_UNIT_SEQ_NUM AND tempT_Mail.MODIFIED_TIME = T_Mail.MODIFIED_TIME AND ((tempT_Mail.SCANNED_TIME IS NULL AND T_Mail.SCANNED_TIME IS NULL)             OR (tempT_Mail.SCANNED_TIME = T_Mail.SCANNED_TIME) OR (tempT_Mail.SCANNED_TIME &lt; T_Mail.SCANNED_TIME) OR (tempT_Mail.SCANNED_TIME IS NULL)))</value>
+  </data>
+  <data name="MailSelectTempRecordsCommand" xml:space="preserve">
+    <value>select * from tempT_Mail</value>
+  </data>
+  <data name="MailDeleteTempRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Mail</value>
+  </data>
+  <data name="PassengerConfigAlias" xml:space="preserve">
+    <value>Passenger</value>
+  </data>
+  <data name="PassengerCommodityName" xml:space="preserve">
+    <value>PASSENGER</value>
+  </data>
+  <data name="PassengerCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Passenger_Config("AP_CDE nvarchar(5), BAG_PSGR_SEQ_NUM numeric(7,0), LEG_SEQ_NUM numeric(2), PNR_NUM nvarchar(7) NOT NULL, LST_NME nvarchar(40) NULL, CKIN_IND nvarchar(1) NOT NULL, BRD_IND nvarchar(1) NOT NULL, RERTE_IND nvarchar(1) NOT NULL, STBY_IND nvarchar(1) NOT NULL, OP_AL_CDE nvarchar(3) NOT NULL, OP_FLT_NUM numeric(4,0) NOT NULL, LEG_AP_CDE nvarchar(5) NOT NULL, MODIFIED_TIME datetime NOT NULL, CONSTRAINT pkPassConfig PRIMARY KEY(AP_CDE, BAG_PSGR_SEQ_NUM, LEG_SEQ_NUM))</value>
+  </data>
+  <data name="PassengerDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Passenger_Config] WHERE (([AP_CDE] = @p1) AND ([BAG_PSGR_SEQ_NUM] = @p2) AND ([LEG_SEQ_NUM] = @p3) AND ([PNR_NUM] = @p4) AND ((@p5 = 1 AND [LST_NME] IS NULL) OR ([LST_NME] = @p6)) AND ([CKIN_IND] = @p7) AND ([BRD_IND] = @p8) AND ([RERTE_IND] = @p9) AND ([STBY_IND] = @p10) AND ([OP_AL_CDE] = @p11) AND ([OP_FLT_NUM] = @p12) AND ([LEG_AP_CDE] = @p13) AND ([MODIFIED_TIME] = @p14))</value>
+  </data>
+  <data name="PassengerDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="PassengerIndexCommand" xml:space="preserve">
+    <value>create index passconfigselectindex on T_Passenger_Config (MODIFIED_TIME)</value>
+  </data>
+  <data name="PassengerInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Passenger_Config] ([AP_CDE], [BAG_PSGR_SEQ_NUM], [LEG_SEQ_NUM], [PNR_NUM], [LST_NME], [CKIN_IND], [BRD_IND], [RERTE_IND], [STBY_IND], [OP_AL_CDE], [OP_FLT_NUM], [LEG_AP_CDE], [MODIFIED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)</value>
+  </data>
+  <data name="PassengerScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="PassengerSelectCommand" xml:space="preserve">
+    <value>SELECT AP_CDE, BAG_PSGR_SEQ_NUM, LEG_SEQ_NUM, LST_NME, CKIN_IND, BRD_IND, RERTE_IND, STBY_IND, OP_AL_CDE, OP_FLT_NUM, LEG_AP_CDE, MODIFIED_TIME FROM T_Passenger_Config</value>
+  </data>
+  <data name="PassengerTableName" xml:space="preserve">
+    <value>T_Passenger_Config</value>
+  </data>
+  <data name="PassengerUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Passenger_Config] SET [AP_CDE] = @p1, [BAG_PSGR_SEQ_NUM] = @p2, [LEG_SEQ_NUM] = @p3, [PNR_NUM] = @p4, [LST_NME] = @p5, [CKIN_IND] = @p6, [BRD_IND] = @p7, [RERTE_IND] = @p8, [STBY_IND] = @p9, [OP_AL_CDE] = @p10, [OP_FLT_NUM] = @p11, [LEG_AP_CDE] = @p12, [MODIFIED_TIME] = @p13 WHERE (([AP_CDE] = @p14) AND ([BAG_PSGR_SEQ_NUM] = @p15) AND ([LEG_SEQ_NUM] = @p16) AND ([PNR_NUM] = @p17) AND ((@p18 = 1 AND [LST_NME] IS NULL) OR ([LST_NME] = @p19)) AND ([CKIN_IND] = @p20) AND ([BRD_IND] = @p21) AND ([RERTE_IND] = @p22) AND ([STBY_IND] = @p23) AND ([OP_AL_CDE] = @p24) AND ([OP_FLT_NUM] = @p25) AND ([LEG_AP_CDE] = @p26) AND ([MODIFIED_TIME] = @p27))</value>
+  </data>
+  <data name="PassengerUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PassengerUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="SyncTimeAlias" xml:space="preserve">
+    <value>SyncTime</value>
+  </data>
+  <data name="SyncTimeCommodityName" xml:space="preserve">
+    <value>SYNCTIME</value>
+  </data>
+  <data name="SyncTimeCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Sync_Time("TABLE_NAME nvarchar(40), SYNC_UPLOAD_TIME datetime NULL, SYNC_DOWNLOAD_TIME datetime NULL, CONSTRAINT pkSynTime PRIMARY KEY(TABLE_NAME))</value>
+  </data>
+  <data name="SyncTimeDeleteCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncTimeDownloadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="SyncTimeIndexCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncTimeInsertCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncTimeScanApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="SyncTimeSelectCommand" xml:space="preserve">
+    <value>SELECT TABLE_NAME, SYNC_UPLOAD_TIME, SYNC_DOWNLOAD_TIME FROM T_Sync_Time</value>
+  </data>
+  <data name="SyncTimeTableName" xml:space="preserve">
+    <value>T_Sync_Time</value>
+  </data>
+  <data name="SyncTimeUpdateCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncTimeUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncTimeUploadApplicable" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="ULDAlias" xml:space="preserve">
+    <value>ULD</value>
+  </data>
+  <data name="ULDCommodityName" xml:space="preserve">
+    <value>ULD</value>
+  </data>
+  <data name="ULDCreateCommand" xml:space="preserve">
+    <value>CREATE TABLE T_Container("OP_AL_CDE nvarchar(3), AP_CDE nvarchar(5), OP_FLT_NUM numeric(4,0), FLT_SCHED_DTM datetime, ARR_DPTR_CDE nvarchar(1), CNTNR_SEQ_NUM numeric(6), CNTNR_ID nvarchar(10) NULL, CNTNR_TYP_CDE nvarchar(6) NULL, CNTNR_STATS_CDE nvarchar(1) NOT NULL, POS_NUM nvarchar(2) NULL, FLT_DPTR_DTM datetime NOT NULL, FNL_DEST_AP_CDE nvarchar(5) NULL, MODIFIED_TIME datetime NOT NULL, SCANNED_TIME datetime NOT NULL, CONSTRAINT pkContainer PRIMARY KEY(OP_AL_CDE, AP_CDE, OP_FLT_NUM, FLT_SCHED_DTM, ARR_DPTR_CDE, CNTNR_SEQ_NUM))</value>
+  </data>
+  <data name="ULDDeleteCommand" xml:space="preserve">
+    <value>DELETE FROM [T_Container] WHERE (([OP_AL_CDE] = @p1) AND ([AP_CDE] = @p2) AND ([OP_FLT_NUM] = @p3) AND ([FLT_SCHED_DTM] = @p4) AND ([ARR_DPTR_CDE] = @p5) AND ([CNTNR_SEQ_NUM] = @p6) AND ((@p7 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p8)) AND ((@p9 = 1 AND [CNTNR_TYP_CDE] IS NULL) OR ([CNTNR_TYP_CDE] = @p10)) AND ([CNTNR_STATS_CDE] = @p11) AND ((@p12 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p13)) AND ([FLT_DPTR_DTM] = @p14) AND ((@p15 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p16)) AND ([MODIFIED_TIME] = @p17) AND ([SCANNED_TIME] = @p18))</value>
+  </data>
+  <data name="ULDDeleteNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>delete from tempT_Container where exists (select  1  FROM T_Container where tempT_Container.OP_AL_CDE = T_Container.OP_AL_CDE             AND tempT_Container.AP_CDE = T_Container.AP_CDE AND tempT_Container.OP_FLT_NUM = T_Container.OP_FLT_NUM AND tempT_Container.FLT_SCHED_DTM = T_Container.FLT_SCHED_DTM AND tempT_Container.ARR_DPTR_CDE = T_Container.ARR_DPTR_CDE AND            tempT_Container.CNTNR_SEQ_NUM = T_Container.CNTNR_SEQ_NUM )</value>
+  </data>
+  <data name="ULDDeleteOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>delete from tempT_Container where exists (select  1  FROM T_Container where tempT_Container.OP_AL_CDE = T_Container.OP_AL_CDE AND tempT_Container.AP_CDE = T_Container.AP_CDE AND tempT_Container.OP_FLT_NUM = T_Container.OP_FLT_NUM AND tempT_Container.FLT_SCHED_DTM = T_Container.FLT_SCHED_DTM AND tempT_Container.ARR_DPTR_CDE = T_Container.ARR_DPTR_CDE AND            tempT_Container.CNTNR_SEQ_NUM = T_Container.CNTNR_SEQ_NUM AND tempT_Container.MODIFIED_TIME &gt; T_Container.MODIFIED_TIME AND (tempT_Container.SCANNED_TIME &lt;= T_Container.SCANNED_TIME OR tempT_Container.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="ULDDeleteTempRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Container</value>
+  </data>
+  <data name="ULDDownloadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="ULDIndexCommand" xml:space="preserve">
+    <value>create index containerselectindex on T_Container (SCANNED_TIME, MODIFIED_TIME)</value>
+  </data>
+  <data name="ULDInsertCommand" xml:space="preserve">
+    <value>INSERT INTO [T_Container] ([OP_AL_CDE], [AP_CDE], [OP_FLT_NUM], [FLT_SCHED_DTM], [ARR_DPTR_CDE], [CNTNR_SEQ_NUM], [CNTNR_ID], [CNTNR_TYP_CDE], [CNTNR_STATS_CDE], [POS_NUM], [FLT_DPTR_DTM], [FNL_DEST_AP_CDE], [MODIFIED_TIME], [SCANNED_TIME]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)</value>
+  </data>
+  <data name="ULDInsertNewRecordCommandBlindUpdate" xml:space="preserve">
+    <value>select temp.* from tempT_Container temp where not exists (select  1  FROM T_Container where TEMP.OP_AL_CDE = T_Container.OP_AL_CDE            AND TEMP.AP_CDE = T_Container.AP_CDE AND TEMP.OP_FLT_NUM = T_Container.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = T_Container.FLT_SCHED_DTM AND TEMP.ARR_DPTR_CDE = T_Container.ARR_DPTR_CDE AND TEMP.CNTNR_SEQ_NUM = T_Container.CNTNR_SEQ_NUM)</value>
+  </data>
+  <data name="ULDInsertOnlyNewerServerRecordsCommand" xml:space="preserve">
+    <value>select temp.OP_AL_CDE, temp.AP_CDE, temp.OP_FLT_NUM, temp.FLT_SCHED_DTM, temp.ARR_DPTR_CDE, temp.CNTNR_SEQ_NUM, temp.CNTNR_TYP_CDE, temp.FLT_DPTR_DTM, temp.FNL_DEST_AP_CDE, temp.MODIFIED_TIME from tempT_Container temp where exists (select  1  FROM T_Container where TEMP.OP_AL_CDE = T_Container.OP_AL_CDE             AND TEMP.AP_CDE = T_Container.AP_CDE AND TEMP.OP_FLT_NUM = T_Container.OP_FLT_NUM AND TEMP.FLT_SCHED_DTM = T_Container.FLT_SCHED_DTM AND TEMP.ARR_DPTR_CDE = T_Container.ARR_DPTR_CDE AND TEMP.CNTNR_SEQ_NUM = T_Container.CNTNR_SEQ_NUM AND TEMP.MODIFIED_TIME &gt; T_Container.MODIFIED_TIME AND (TEMP.SCANNED_TIME &lt;= T_Container.SCANNED_TIME OR TEMP.SCANNED_TIME IS NULL))</value>
+  </data>
+  <data name="ULDScanApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="ULDSelectCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, AP_CDE, OP_FLT_NUM, convert(nvarchar,FLT_SCHED_DTM,23) as FLT_SCHED_DTM, ARR_DPTR_CDE, CNTNR_SEQ_NUM, coalesce(CNTNR_ID, '" &amp; String.Empty &amp; "') as CNTNR_ID, coalesce(CNTNR_TYP_CDE, '" &amp; String.Empty &amp; "') as CNTNR_TYP_CDE, coalesce(CNTNR_STATS_CDE, '" &amp; String.Empty &amp; "') as CNTNR_STATS_CDE, coalesce(POS_NUM, '" &amp; String.Empty &amp; "') as POS_NUM, convert(nvarchar, FLT_DPTR_DTM,23) as FLT_DPTR_DTM, coalesce(FNL_DEST_AP_CDE, '" &amp; String.Empty &amp; "') as FNL_DEST_AP_CDE, convert(nvarchar, MODIFIED_TIME,20) as MODIFIED_TIME, coalesce(convert(nvarchar, SCANNED_TIME,20), '" &amp; String.Empty &amp; "') as SCANNED_TIME FROM T_Container</value>
+  </data>
+  <data name="ULDSelectNonOverridingFieldsCommand" xml:space="preserve">
+    <value>SELECT OP_AL_CDE, AP_CDE, OP_FLT_NUM, FLT_SCHED_DTM, ARR_DPTR_CDE, CNTNR_SEQ_NUM, CNTNR_TYP_CDE, FLT_DPTR_DTM, FNL_DEST_AP_CDE, MODIFIED_TIME FROM T_Container</value>
+  </data>
+  <data name="ULDSelectTempRecordsCommand" xml:space="preserve">
+    <value>select * from tempT_Container</value>
+  </data>
+  <data name="ULDSkipRecordsCommand" xml:space="preserve">
+    <value>DELETE from tempT_Container where exists (select  1  FROM T_Container where tempT_Container.OP_AL_CDE = T_Container.OP_AL_CDE AND tempT_Container.AP_CDE = T_Container.AP_CDE AND tempT_Container.OP_FLT_NUM = T_Container.OP_FLT_NUM AND tempT_Container.FLT_SCHED_DTM = T_Container.FLT_SCHED_DTM AND tempT_Container.ARR_DPTR_CDE = T_Container.ARR_DPTR_CDE AND            tempT_Container.CNTNR_SEQ_NUM = T_Container.CNTNR_SEQ_NUM AND tempT_Container.MODIFIED_TIME = T_Container.MODIFIED_TIME             AND ((tempT_Container.SCANNED_TIME IS NULL AND T_Container.SCANNED_TIME IS NULL) OR (tempT_Container.SCANNED_TIME = T_Container.SCANNED_TIME)             OR (tempT_Container.SCANNED_TIME &lt; T_Container.SCANNED_TIME)             OR (tempT_Container.SCANNED_TIME IS NULL)))</value>
+  </data>
+  <data name="ULDTableName" xml:space="preserve">
+    <value>T_Container</value>
+  </data>
+  <data name="ULDUpdateCommand" xml:space="preserve">
+    <value>UPDATE [T_Container] SET [OP_AL_CDE] = @p1, [AP_CDE] = @p2, [OP_FLT_NUM] = @p3, [FLT_SCHED_DTM] = @p4, [ARR_DPTR_CDE] = @p5, [CNTNR_SEQ_NUM] = @p6, [CNTNR_ID] = @p7, [CNTNR_TYP_CDE] = @p8, [CNTNR_STATS_CDE] = @p9, [POS_NUM] = @p10, [FLT_DPTR_DTM] = @p11, [FNL_DEST_AP_CDE] = @p12, [MODIFIED_TIME] = @p13, [SCANNED_TIME] = @p14 WHERE (([OP_AL_CDE] = @p15) AND ([AP_CDE] = @p16) AND ([OP_FLT_NUM] = @p17) AND ([FLT_SCHED_DTM] = @p18) AND ([ARR_DPTR_CDE] = @p19) AND ([CNTNR_SEQ_NUM] = @p20) AND ((@p21 = 1 AND [CNTNR_ID] IS NULL) OR ([CNTNR_ID] = @p22)) AND ((@p23 = 1 AND [CNTNR_TYP_CDE] IS NULL) OR ([CNTNR_TYP_CDE] = @p24)) AND ([CNTNR_STATS_CDE] = @p25) AND ((@p26 = 1 AND [POS_NUM] IS NULL) OR ([POS_NUM] = @p27)) AND ([FLT_DPTR_DTM] = @p28) AND ((@p29 = 1 AND [FNL_DEST_AP_CDE] IS NULL) OR ([FNL_DEST_AP_CDE] = @p30)) AND ([MODIFIED_TIME] = @p31) AND ([SCANNED_TIME] = @p32))</value>
+  </data>
+  <data name="ULDUpdateNonOverridenCommand" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ULDUploadApplicable" xml:space="preserve">
+    <value>True</value>
+  </data>
+</root>

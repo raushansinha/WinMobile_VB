@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://services.safetrac.nwa.com/DataSyncService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns="http://schemas.xmlsoap.org/soap/encoding/" name="DataSyncService" targetNamespace="http://services.safetrac.nwa.com/DataSyncService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://services.safetrac.nwa.com/DataSyncService/">
+      <xs:complexType name="MessageHeaderType">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="hhtID" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="userID" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="messageID" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="deprStationCode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" default="Y" name="isTrainingMode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="serviceType">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="D" />
+                <xs:enumeration value="U" />
+                <xs:enumeration value="G" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="1" maxOccurs="1" name="requestedOperationType">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="MAIL" />
+                <xs:enumeration value="ERRORCODES" />
+                <xs:enumeration value="FLIGHT" />
+                <xs:enumeration value="BAGS" />
+                <xs:enumeration value="FREIGHT" />
+                <xs:enumeration value="ULD" />
+                <xs:enumeration value="ULDREG" />
+                <xs:enumeration value="ULDDEF" />
+                <xs:enumeration value="ULDCHECK" />
+                <xs:enumeration value="ULDCREATE" />
+                <xs:enumeration value="ULDPOS" />
+                <xs:enumeration value="LINEITEM" />
+                <xs:enumeration value="LDAPLOGIN" />
+                <xs:enumeration value="REOPENCLOSEULD" />
+                <xs:enumeration value="AIRCRAFTCONFIG" />
+                <xs:enumeration value="PRECLOSE" />
+                <xs:enumeration value="BAGTAGINQDUP" />
+                <xs:enumeration value="BAGTAGINQ" />
+                <xs:enumeration value="AWBINQ" />
+                <xs:enumeration value="PASSENGERCONFIG" />
+                <xs:enumeration value="VIEWBAGSTOGOINQ" />
+                <xs:enumeration value="VIEWBINBULKINQ" />
+                <xs:enumeration value="VIEWBAGSTOUNLOADINQ" />
+                <xs:enumeration value="AIRLINECODE" />
+                <xs:enumeration value="VIEWULDCARTINQ" />
+                <xs:enumeration value="VIEWBAGSTOUNLD" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SafetracSOAPEnvelope">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="header" type="tns:MessageHeaderType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="body" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="loadStatus" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="returnCode" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="errorCode" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="errorMsg" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DownloadServiceRequestElement" type="tns:SafetracSOAPEnvelope" />
+      <xs:element name="DownloadServiceResponseElement" type="tns:SafetracSOAPEnvelope" />
+      <xs:element name="UploadServiceRequestElement" type="tns:SafetracSOAPEnvelope" />
+      <xs:element name="UploadServiceResponseElement" type="tns:SafetracSOAPEnvelope" />
+      <xs:element name="GeneralServiceRequestElement" type="tns:SafetracSOAPEnvelope" />
+      <xs:element name="GeneralServiceResponseElement" type="tns:SafetracSOAPEnvelope" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GeneralServiceRequestMessage">
+    <wsdl:part name="generalServiceRequest" element="tns:GeneralServiceRequestElement" />
+  </wsdl:message>
+  <wsdl:message name="UploadServiceRequestMessage">
+    <wsdl:part name="uploadServiceRequest" element="tns:UploadServiceRequestElement" />
+  </wsdl:message>
+  <wsdl:message name="GeneralServiceResponseMessage">
+    <wsdl:part name="generalServiceResponse" element="tns:GeneralServiceResponseElement" />
+  </wsdl:message>
+  <wsdl:message name="UploadServiceResponseMessage">
+    <wsdl:part name="uploadServiceResponse" element="tns:UploadServiceResponseElement" />
+  </wsdl:message>
+  <wsdl:message name="DownloadServiceRequestMessage">
+    <wsdl:part name="downloadServiceRequest" element="tns:DownloadServiceRequestElement" />
+  </wsdl:message>
+  <wsdl:message name="DownloadServiceResponseMessage">
+    <wsdl:part name="downloadServiceResponse" element="tns:DownloadServiceResponseElement" />
+  </wsdl:message>
+  <wsdl:portType name="DataSyncService">
+    <wsdl:operation name="PerformGeneralService">
+      <wsdl:input name="GeneralServiceReq" message="tns:GeneralServiceRequestMessage" />
+      <wsdl:output name="GeneralServiceRes" message="tns:GeneralServiceResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformDownloadService">
+      <wsdl:input name="DownloadServiceReq" message="tns:DownloadServiceRequestMessage" />
+      <wsdl:output name="DownloadServiceRes" message="tns:DownloadServiceResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformUploadService">
+      <wsdl:input name="UploadServiceReq" message="tns:UploadServiceRequestMessage" />
+      <wsdl:output name="UploadServiceRes" message="tns:UploadServiceResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataSyncServiceBean" type="tns:DataSyncService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PerformDownloadService">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DownloadServiceReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadServiceRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformUploadService">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UploadServiceReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadServiceRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformGeneralService">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GeneralServiceReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GeneralServiceRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataSyncService">
+    <wsdl:port name="DataSyncServiceSOAP" binding="tns:DataSyncServiceBean">
+      <soap:address location="http://10.145.86.152:9080/SafetracServicesWeb/services/DataSyncServiceSOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

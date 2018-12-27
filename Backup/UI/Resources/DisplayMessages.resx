@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoadMailWithoutBarcodeCancelled" xml:space="preserve">
+    <value>Entry Cancelled</value>
+  </data>
+  <data name="AddLateBag" xml:space="preserve">
+    <value>Items Added</value>
+  </data>
+  <data name="AircraftRegistrationNoFound" xml:space="preserve">
+    <value>Could not find aircraft registration for Flight &lt;Flight ID&gt;</value>
+  </data>
+  <data name="AlertError" xml:space="preserve">
+    <value>Alert Error</value>
+  </data>
+  <data name="AlreadyLoaded" xml:space="preserve">
+    <value>Already Loaded</value>
+  </data>
+  <data name="AlreadyRegistered" xml:space="preserve">
+    <value>Already Registrd</value>
+  </data>
+  <data name="AlreadyUnloaded" xml:space="preserve">
+    <value>Already Unloaded</value>
+  </data>
+  <data name="Animal" xml:space="preserve">
+    <value>Loading Animal</value>
+  </data>
+  <data name="BagstoUnload" xml:space="preserve">
+    <value>Unload Bags -&gt; CH</value>
+  </data>
+  <data name="BagTagLocated" xml:space="preserve">
+    <value>Bag Tag Located</value>
+  </data>
+  <data name="BagTagonAlert" xml:space="preserve">
+    <value>Bag Tag on Alert</value>
+  </data>
+  <data name="BarcodeError" xml:space="preserve">
+    <value>Barcode Read Err</value>
+  </data>
+  <data name="BinCapacityExceeded" xml:space="preserve">
+    <value>Bin Cap Exceeded</value>
+  </data>
+  <data name="CancelLoadofBagonAlert" xml:space="preserve">
+    <value>Load Cancelled</value>
+  </data>
+  <data name="CancelMerge" xml:space="preserve">
+    <value>Merge Cancelled</value>
+  </data>
+  <data name="CardinalDown" xml:space="preserve">
+    <value>Cardinal Down</value>
+  </data>
+  <data name="CargoNotDone" xml:space="preserve">
+    <value>Cargo Not Done</value>
+  </data>
+  <data name="CartOnly" xml:space="preserve">
+    <value>Cart Only</value>
+  </data>
+  <data name="CartPositioned" xml:space="preserve">
+    <value>ERR- Cart Pos</value>
+  </data>
+  <data name="CartsNotAllowed" xml:space="preserve">
+    <value>Cant Pos Carts</value>
+  </data>
+  <data name="CheckingUpdates" xml:space="preserve">
+    <value>Checking for Software Updates</value>
+  </data>
+  <data name="ContainerSheetAlreadyRegistered" xml:space="preserve">
+    <value>Sheet Already Reg</value>
+  </data>
+  <data name="ContainerSheetCreated" xml:space="preserve">
+    <value>Sheet Created</value>
+  </data>
+  <data name="ContainerSheetinUse" xml:space="preserve">
+    <value>Sheet In Use</value>
+  </data>
+  <data name="ContainerSheetNotRegistered" xml:space="preserve">
+    <value>Sheet Not Regd” or “Cont Sheet Not Regd</value>
+  </data>
+  <data name="ContainerSheetorULDinUse" xml:space="preserve">
+    <value>Sheet / ULD In Use” or “ULD is In Use</value>
+  </data>
+  <data name="ContainerSuccessfullyRegistered" xml:space="preserve">
+    <value>Registered OK</value>
+  </data>
+  <data name="DamagedBag" xml:space="preserve">
+    <value>Damaged Bag Input</value>
+  </data>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>Database Error</value>
+  </data>
+  <data name="DupeContainers" xml:space="preserve">
+    <value>Dupe Containers – Verify</value>
+  </data>
+  <data name="DuplicateBagTag" xml:space="preserve">
+    <value>Dupe Tag(s) Found</value>
+  </data>
+  <data name="DuplicateBagTagsFound" xml:space="preserve">
+    <value>Dupe Tag(s) Found</value>
+  </data>
+  <data name="EmptyContainer" xml:space="preserve">
+    <value>Empty Container</value>
+  </data>
+  <data name="EmptyHold" xml:space="preserve">
+    <value>No Items Loaded</value>
+  </data>
+  <data name="ExpediteBag" xml:space="preserve">
+    <value>Expedite this Bag? Press Y or N…</value>
+  </data>
+  <data name="ExpediteFreight" xml:space="preserve">
+    <value>Expedite this AWB? Press Y or N…</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>File Error</value>
+  </data>
+  <data name="FlightClosed" xml:space="preserve">
+    <value>Flight Closed Out</value>
+  </data>
+  <data name="FlightDeparted" xml:space="preserve">
+    <value>Flight Departed</value>
+  </data>
+  <data name="FreightUnloaded" xml:space="preserve">
+    <value>Cargo Unloaded</value>
+  </data>
+  <data name="ScannerAlreadyRunning" xml:space="preserve">
+    <value>Scanner Already Running</value>
+  </data>
+  <data name="InvalidAWB" xml:space="preserve">
+    <value>Invalid AWB</value>
+  </data>
+  <data name="InvalidBagTagFormat" xml:space="preserve">
+    <value>Invalid Tag FMT</value>
+  </data>
+  <data name="InvalidBarcode" xml:space="preserve">
+    <value>Invalid Barcode</value>
+  </data>
+  <data name="InvalidDateFormat" xml:space="preserve">
+    <value>Invalid Date FMT</value>
+  </data>
+  <data name="InvalidDeparture" xml:space="preserve">
+    <value>Invalid Dept</value>
+  </data>
+  <data name="InvalidDepartureDate" xml:space="preserve">
+    <value>Invalid Date</value>
+  </data>
+  <data name="InvalidDepartureDateFormat" xml:space="preserve">
+    <value>Invalid Date FMT</value>
+  </data>
+  <data name="InvalidDestination" xml:space="preserve">
+    <value>Invalid Dest</value>
+  </data>
+  <data name="InvalidDestinationFormat" xml:space="preserve">
+    <value>Invalid Dest FMT</value>
+  </data>
+  <data name="InvalidFlight" xml:space="preserve">
+    <value>Invalid Flight</value>
+  </data>
+  <data name="InvalidFlightFormat" xml:space="preserve">
+    <value>Invalid Flt FMT</value>
+  </data>
+  <data name="InvalidHold" xml:space="preserve">
+    <value>Invalid Bin / Bulk</value>
+  </data>
+  <data name="InvalidHubDestination" xml:space="preserve">
+    <value>Invalid Hub Dest</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="InvalidPieceCount" xml:space="preserve">
+    <value>Invalid Piece Count</value>
+  </data>
+  <data name="InvalidPieces" xml:space="preserve">
+    <value>Invalid Pcs</value>
+  </data>
+  <data name="InvalidPosition" xml:space="preserve">
+    <value>Invalid Position</value>
+  </data>
+  <data name="InvalidType" xml:space="preserve">
+    <value>Invalid Type</value>
+  </data>
+  <data name="InvalidULDFormat" xml:space="preserve">
+    <value>Invalid ULD FMT</value>
+  </data>
+  <data name="InvalidUldOrCartOrContainerSheet" xml:space="preserve">
+    <value>Invalid ULD / Sheet</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="InvalidWeight" xml:space="preserve">
+    <value>Invalid Weight</value>
+  </data>
+  <data name="ItemsAdded" xml:space="preserve">
+    <value>Items Added</value>
+  </data>
+  <data name="LoadError" xml:space="preserve">
+    <value>Load Error</value>
+  </data>
+  <data name="LoadMailwithoutBarcode" xml:space="preserve">
+    <value>Load Mail without barcode?</value>
+  </data>
+  <data name="MailAlreadyRegistered" xml:space="preserve">
+    <value>Mail Already Registered</value>
+  </data>
+  <data name="MailOffloaded" xml:space="preserve">
+    <value>Mail Offloaded</value>
+  </data>
+  <data name="MailRegistered" xml:space="preserve">
+    <value>Mail Registered</value>
+  </data>
+  <data name="MergeULD_Cart_Bin_Bulk" xml:space="preserve">
+    <value>Confirm Merge from Scanned Barcode.  Is this the From or To Location?</value>
+  </data>
+  <data name="MultiHeavyBag" xml:space="preserve">
+    <value>Heavy Bag Input</value>
+  </data>
+  <data name="NoConfigurationFile" xml:space="preserve">
+    <value>Existing config file not found; downloading.</value>
+  </data>
+  <data name="NoDataFound" xml:space="preserve">
+    <value>No Data Found</value>
+  </data>
+  <data name="NoLoadAuthority" xml:space="preserve">
+    <value>No Load Auth</value>
+  </data>
+  <data name="NoLoadsonFlight" xml:space="preserve">
+    <value>No loads on Flt</value>
+  </data>
+  <data name="NonStandardWeight" xml:space="preserve">
+    <value>Enter Non-Std Wgt</value>
+  </data>
+  <data name="NoPrePlan" xml:space="preserve">
+    <value>Err: No Pre-Plan</value>
+  </data>
+  <data name="NormalBag" xml:space="preserve">
+    <value>Normal Bag Input</value>
+  </data>
+  <data name="NotaMailBarcode" xml:space="preserve">
+    <value>Not Mail Barcode</value>
+  </data>
+  <data name="NotLoaded" xml:space="preserve">
+    <value>Not Loaded</value>
+  </data>
+  <data name="NoUpgradeAvailable" xml:space="preserve">
+    <value>No software updates for &lt;Software Name&gt;</value>
+  </data>
+  <data name="OKtoLoad" xml:space="preserve">
+    <value>*OK To LOAD</value>
+  </data>
+  <data name="OKtoLoadHeavy" xml:space="preserve">
+    <value>*OK LOAD Hvy</value>
+  </data>
+  <data name="OKtoLoadPlanesideBag" xml:space="preserve">
+    <value>*OK LOAD PB</value>
+  </data>
+  <data name="PassengerNotCheckedIn" xml:space="preserve">
+    <value>PSGR Not Ckd In</value>
+  </data>
+  <data name="PassengerOnStandby" xml:space="preserve">
+    <value>PSGR On Standby</value>
+  </data>
+  <data name="Planeside" xml:space="preserve">
+    <value>Planeside Input</value>
+  </data>
+  <data name="PleaseLogin" xml:space="preserve">
+    <value>Please Login</value>
+  </data>
+  <data name="PositionAlreadyUsed" xml:space="preserve">
+    <value>Pos In Use</value>
+  </data>
+  <data name="PositionCapacityExceeded" xml:space="preserve">
+    <value>POS Cap Exceeded</value>
+  </data>
+  <data name="ReasonablenessCheckfor_IB_MB" xml:space="preserve">
+    <value>Reasonableness Check for IB / MB Baggage</value>
+  </data>
+  <data name="ReasonablenessCheckforCargo" xml:space="preserve">
+    <value>Reasonableness Check for Total Cargo</value>
+  </data>
+  <data name="ReasonablenessCheckforDomesticBags" xml:space="preserve">
+    <value>Reasonableness Check for Domestic Baggage</value>
+  </data>
+  <data name="RegisterULDFirst" xml:space="preserve">
+    <value>Register ULD First</value>
+  </data>
+  <data name="RemoveAlert" xml:space="preserve">
+    <value>Alert Removed</value>
+  </data>
+  <data name="RemoveBagAlert" xml:space="preserve">
+    <value>Alert Removed</value>
+  </data>
+  <data name="RetrievingBagAlertData" xml:space="preserve">
+    <value>Retrieving Bag Alert Data.  Please Wait…</value>
+  </data>
+  <data name="RetrievingData" xml:space="preserve">
+    <value>Retrieving Data.  Please Wait…</value>
+  </data>
+  <data name="RetryLogin" xml:space="preserve">
+    <value>Retry # &lt;retry seq #&gt; , Connecting to Safetrac…</value>
+  </data>
+  <data name="SaveConfiguration" xml:space="preserve">
+    <value>Settings changed</value>
+  </data>
+  <data name="ScanSheetFirst" xml:space="preserve">
+    <value>Scan Sheet First</value>
+  </data>
+  <data name="SetBagAlert" xml:space="preserve">
+    <value>Alert Set</value>
+  </data>
+  <data name="SheetRedefined" xml:space="preserve">
+    <value>Sheet Redefined</value>
+  </data>
+  <data name="SingleHeavyBag" xml:space="preserve">
+    <value>Heavy Bag Input</value>
+  </data>
+  <data name="StartMessage" xml:space="preserve">
+    <value>Please Wait…Setting up Scanner App</value>
+  </data>
+  <data name="StatusMessageBagAlert" xml:space="preserve">
+    <value>Retrieving Bag Tag alert data.  Please Wait…</value>
+  </data>
+  <data name="ULDAlreadyRegistered" xml:space="preserve">
+    <value>ULD Already Reg</value>
+  </data>
+  <data name="ULDClosed" xml:space="preserve">
+    <value>ULD is closed</value>
+  </data>
+  <data name="ULDFound" xml:space="preserve">
+    <value>ULD Located</value>
+  </data>
+  <data name="ULDinUse" xml:space="preserve">
+    <value>ULD In Use</value>
+  </data>
+  <data name="ULDisnotyetRegistered" xml:space="preserve">
+    <value>ULD Not Reg’d</value>
+  </data>
+  <data name="ULDisOKtoUse" xml:space="preserve">
+    <value>ULD OK To Use</value>
+  </data>
+  <data name="UnknownAWB" xml:space="preserve">
+    <value>Unknown AWB</value>
+  </data>
+  <data name="UnknownBag" xml:space="preserve">
+    <value>Unknown Bag Tag</value>
+  </data>
+  <data name="UnknownContainer" xml:space="preserve">
+    <value>Unknown ULD</value>
+  </data>
+  <data name="UnknownContainerSheet" xml:space="preserve">
+    <value>Unknown Sheet” or “UNK Cont Sheet</value>
+  </data>
+  <data name="UnknownFlight" xml:space="preserve">
+    <value>Unknown Flight</value>
+  </data>
+  <data name="UnknownHandlingAgent" xml:space="preserve">
+    <value>Unknown Hagent</value>
+  </data>
+  <data name="UnknownScanner" xml:space="preserve">
+    <value>Unknown Scanner ID</value>
+  </data>
+  <data name="UnknownMail" xml:space="preserve">
+    <value>Mail Not Found</value>
+  </data>
+  <data name="UnknownScan" xml:space="preserve">
+    <value>Barcode Not Read</value>
+  </data>
+  <data name="UnloadFreight" xml:space="preserve">
+    <value>Offload first before reloading</value>
+  </data>
+  <data name="UnloadMailwithoutBarcode" xml:space="preserve">
+    <value>Unload Mail without barcode?</value>
+  </data>
+  <data name="UpgradeFailed" xml:space="preserve">
+    <value>Upgrade Failure from &lt;Service Name&gt; &lt;error message from service&gt;</value>
+  </data>
+  <data name="UseManualProcedure" xml:space="preserve">
+    <value>Error on Cargo updates to Flight &lt;Flight ID&gt;.  Please use manual procedure.</value>
+  </data>
+  <data name="UserNotAuthorized" xml:space="preserve">
+    <value>No access privilege</value>
+  </data>
+  <data name="ViewScannerConfiguration" xml:space="preserve">
+    <value>Are you sure you want to update these settings?</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome &lt;First Name&gt; &lt;Last Name&gt;</value>
+  </data>
+  <data name="NonConfiguredFlight" xml:space="preserve">
+    <value>FLIGHT NOT CONFIGURED</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>UNKNOWN ERROR</value>
+  </data>
+  <data name="BagUnloaded" xml:space="preserve">
+    <value>** Unloaded **</value>
+  </data>
+</root>
